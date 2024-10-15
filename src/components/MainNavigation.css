@@ -50,7 +50,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  width: 100;
+  width: 100%;
   padding: 0.75rem 1.25rem;
   border-radius: 8px;
   text-decoration: none;
@@ -71,29 +71,27 @@
   cursor: pointer;
 }
 
+.nav-link-dropDown {
+  font-family: "Montserrat", serif;
+  display: flex;
+  align-items: start;
+  gap: 30px;
+  flex-direction: column;
+  background-color: #050505;
+  padding: 40px 32px;
+  width: 100%;
+  height: 100vh;
+}
+
 .dropdown-nav-links-parent {
   position: fixed;
-  top: 60px;
+  top: 120px;
   left: 0;
   right: 0;
   z-index: 1000;
   animation: slideInFromTop 0.5s ease-in-out;
+  height: 100vh;
   max-height: calc(100vh - 60px);
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #888 transparent;
-
-  /* ::-webkit-scrollbar {
-    width: 6px;
-  }
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 10px;
-    border: transparent;
-  } */
 }
 
 @keyframes slideInFromTop {
@@ -117,43 +115,40 @@
   }
 }
 
-.nav-link-dropDown {
-  display: flex;
-  align-items: center;
-  gap: 100px;
-  flex-direction: column;
-  background-color: #3e432f;
-  padding: 40px 0;
-  width: 100%;
-  height: 100vh;
-}
+/* Media queries */
 
-/* Media query for screen sizes less than or equal to 1150px */
 @media screen and (max-width: 1150px) {
   .hamburger-menu {
     display: block;
   }
 
-  .main-nav {
+  #main-nav-id {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  #status-id {
+    height: 30px;
+    width: auto;
   }
 
   .profile-section {
     flex-direction: row;
-    width: 300px;
+    align-items: center;
+    width: auto;
     margin-bottom: 0;
   }
 
   .profile-image {
-    height: 60px;
+    width: 70px;
+    height: 70px;
   }
 
   .status {
-    padding: 2px 12px;
-    font-size: 14px;
+    padding: 4px 17px;
   }
 
   .nav-links-parent {
@@ -162,35 +157,5 @@
 
   .dropdown-nav-links-parent {
     animation: slideInFromTop 0.7s ease-in-out;
-  }
-
-  /* .nav-links-parent {
-      display: none; 
-      flex-direction: column;
-      background-color: #333; 
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-  
-    .nav-links-parent.show {
-      display: flex; 
-    } */
-
-  /* Dropdown button style */
-  .dropdown-btn {
-    background-color: #444; /* Color of the dropdown button */
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-  }
-
-  .dropdown-btn:focus {
-    outline: none;
   }
 }

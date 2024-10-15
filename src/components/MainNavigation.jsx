@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import "./MainNavigation.css";
 import { GoDotFill } from "react-icons/go";
 import { MdHomeFilled } from "react-icons/md";
 import { LiaBlogSolid } from "react-icons/lia";
@@ -11,6 +10,7 @@ import { MdOutlineMail } from "react-icons/md";
 import { PiCopyrightLight } from "react-icons/pi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RiCloseLargeFill } from "react-icons/ri";
+import "./MainNavigation.css";
 
 function MainNavigation() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -20,7 +20,7 @@ function MainNavigation() {
 
   return (
     <>
-      <nav className="main-nav">
+      <nav id="main-nav-id" className="main-nav">
         <div className="profile-section">
           <span>
             <img
@@ -30,10 +30,18 @@ function MainNavigation() {
             />
           </span>
 
-          <div className="status">
+          <div id="status-id" className="status">
             {" "}
             <GoDotFill /> Available for Work
           </div>
+        </div>
+
+        <div className="hamburger-menu" onClick={toggleDropdown}>
+          {isDropdownOpen ? (
+            <RiCloseLargeFill size={30} color="#ffffff" />
+          ) : (
+            <RxHamburgerMenu size={30} color="#ffffff" />
+          )}
         </div>
 
         <div className="nav-links-parent">
@@ -107,70 +115,76 @@ function MainNavigation() {
             Licensing
           </NavLink>
         </div>
-
-        <div className="hamburger-menu" onClick={toggleDropdown}>
-          {isDropdownOpen ? (
-            <RiCloseLargeFill size={35} color="#c9ce8c" />
-          ) : (
-            <RxHamburgerMenu size={35} color="#c9ce8c" />
-          )}
-        </div>
       </nav>
 
       {isDropdownOpen && (
         <div className="dropdown-nav-links-parent">
           <div className="nav-link-dropDown">
             <NavLink
-              className="root-nav-dropDown"
-              to="/"
+              className={({ isActive }) =>
+              isActive ? "navlinks active" : "navlinks"
+            }
+              to="/" onClick={toggleDropdown}
             >
               <MdHomeFilled size={16} />
               Home
             </NavLink>
 
             <NavLink
-              className="root-nav-dropDown"
-              to="/blog"
+              className={({ isActive }) =>
+                isActive ? "navlinks active" : "navlinks"
+              }
+              to="/blog" onClick={toggleDropdown}
             >
               <LiaBlogSolid size={16} />
               Blog
             </NavLink>
 
             <NavLink
-              className="root-nav-dropDown"
-              to="/about"
+              className={({ isActive }) =>
+                isActive ? "navlinks active" : "navlinks"
+              }
+              to="/about" onClick={toggleDropdown}
             >
               <CgProfile size={16} />
               About
             </NavLink>
 
             <NavLink
-              className="root-nav-dropDown"
-              to="/stack"
+              className={({ isActive }) =>
+                isActive ? "navlinks active" : "navlinks"
+              }
+              to="/stack" onClick={toggleDropdown}
             >
               <SiDatabricks size={16} />
               Stack
             </NavLink>
 
             <NavLink
-              className="root-nav-dropDown"
-              to="/project"
+              className={({ isActive }) =>
+                isActive ? "navlinks active" : "navlinks"
+              }
+              to="/project" onClick={toggleDropdown}
             >
               <PiWallLight size={16} />
               Projects
             </NavLink>
 
             <NavLink
-              className="root-nav-dropDown"
-              to="/contact"
+              className={({ isActive }) =>
+                isActive ? "navlinks active" : "navlinks"
+              }
+              to="/contact" onClick={toggleDropdown}
             >
               <MdOutlineMail size={16} />
               Contact
             </NavLink>
 
             <NavLink
-              className="root-nav-dropDown"
-              to="/licensing"
+              className={({ isActive }) =>
+                isActive ? "navlinks active" : "navlinks"
+              }
+              to="/licensing" onClick={toggleDropdown}
             >
               <PiCopyrightLight size={16} />
               Licensing
@@ -183,41 +197,3 @@ function MainNavigation() {
 }
 
 export default MainNavigation;
-
-//  {/* <div className={`nav-links-parent ${isDropdownOpen ? "show" : ""}`}>
-//         <span>
-//           <NavLink className="navlinks" to="/">
-//             <MdHomeFilled size={16} /> Home
-//           </NavLink>
-//         </span>
-//         <span>
-//           <NavLink className="navlinks" to="/blog">
-//             <LiaBlogSolid size={16} /> Blog
-//           </NavLink>
-//         </span>
-//         <span>
-//           <NavLink className="navlinks" to="/about">
-//             <CgProfile size={16} /> About
-//           </NavLink>
-//         </span>
-//         <span>
-//           <NavLink className="navlinks" to="/stack">
-//             <SiDatabricks size={16} /> Stack
-//           </NavLink>
-//         </span>
-//         <span>
-//           <NavLink className="navlinks" to="/project">
-//             <PiWallLight size={16} /> Projects
-//           </NavLink>
-//         </span>
-//         <span>
-//           <NavLink className="navlinks" to="/contact">
-//             <MdOutlineMail size={16} /> Contact
-//           </NavLink>
-//         </span>
-//         <span>
-//           <NavLink className="navlinks" to="/licensing">
-//             <PiCopyrightLight size={16} /> Licensing
-//           </NavLink>
-//         </span>
-//       </div> */}
