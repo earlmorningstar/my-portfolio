@@ -1,7 +1,13 @@
 import "./Index.css";
-import { MdOutlineReadMore } from "react-icons/md";
+import DispatchItem from "./DispatchItem";
 
 function HomePage() {
+  
+  const dispatchItems = Array(12).fill({
+    image: "/images/silhouette.jfif",
+    text: "This is an inspirational quote for you to improve yourself and get better. Fight until the end.",
+  });
+
   return (
     <div className="homepage-main-container">
       <span>
@@ -18,30 +24,11 @@ function HomePage() {
       </span>
 
       <div className="latest-dispatch-container">
-        <div  className="dispatch-image-container">
-          <img src="/images/silhouette.jfif" alt="Profile" />
-          <p className="dispatch-overlay-text">
-            This is an inspirational quote for you to improve yourself and get
-            better. Fight until the end. <p>Dig Deeper <MdOutlineReadMore size={25}/></p>
-          </p>
-        </div>
-        <div className="dispatch-image-container">
-          <img src="/images/silhouette.jfif" alt="Profile" />
-          <p className="dispatch-overlay-text">
-            This is an inspirational quote for you to improve yourself and get
-            better. Fight until the end. <p>Dig Deeper <MdOutlineReadMore size={25}/></p>
-          </p>
-        </div>
-        <div className="dispatch-image-container">
-          <img src="/images/silhouette.jfif" alt="Profile" />
-          <p className="dispatch-overlay-text">
-            This is an inspirational quote for you to improve yourself and get
-            better. Fight until the end. <p>Dig Deeper <MdOutlineReadMore size={25}/></p>
-          </p>
-        </div>
+        {dispatchItems.slice(0, 3).map((item, index) => (
+          <DispatchItem key={index} image={item.image} text={item.text} />
+        ))}
       </div>
 
-      
       <span>
         <h3>Recent Deployment</h3>
       </span>
