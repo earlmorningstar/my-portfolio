@@ -158,7 +158,6 @@ font-family: "Raleway", sans-serif; */
   flex-direction: column;
   gap: 10px;
   text-align: center;
-
 }
 
 .aboutpage-headers-holder h4 {
@@ -193,7 +192,7 @@ font-family: "Raleway", sans-serif; */
 }
 
 .pagebreak {
-  border: 1px solid #333333;
+  border: 1px solid #464545;
 }
 
 .aboutpage-main-container span {
@@ -227,11 +226,11 @@ font-family: "Raleway", sans-serif; */
   gap: 2px;
 }
 
-#aboutpage-detailHolder h3{
-display: flex;
-align-items: center;
-gap: 10px;
-font-size: 18px;
+#aboutpage-detailHolder h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
 }
 
 #aboutpage-detailHolder p {
@@ -240,6 +239,226 @@ font-size: 18px;
   color: #999999;
 
   margin-left: 1.7rem;
+}
+
+/* STACKPAGE SECTION---- */
+
+.stackpage-main-container {
+  font-family: "Poppins", sans-serif;
+}
+
+.stackpage-main-container h3 {
+  font-weight: 400;
+  font-size: 25px;
+  color: #e6e6e6;
+  margin-bottom: 6rem;
+}
+
+.each-tech-kit {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  gap: 2rem;
+  height: 14rem;
+  margin-bottom: 1.5rem;
+}
+
+.each-tech-kit span img {
+  width: 50px;
+  height: 50px;
+  margin-top: 8px;
+}
+
+.stack-image {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 7%;
+}
+
+.each-tech-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.each-tech-info span h3 {
+  color: #e6e6e6;
+  font-size: 22px;
+}
+
+.each-tech-info p {
+  color: #999999;
+  font-weight: 200;
+  font-size: 17px;
+}
+
+#stack-title {
+  margin-bottom: 0;
+}
+
+#stack-fs-id {
+  font-size: 15px;
+}
+
+/* PROJECT SECTION--- */
+
+.projects-main-container {
+  font-family: "Poppins", sans-serif;
+}
+
+.projects-main-container h2 {
+  font-weight: 400;
+  font-size: 25px;
+  color: #e6e6e6;
+  margin-bottom: 6rem;
+}
+
+.projects-parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.project-holder {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-holder span {
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.project-holder span:hover {
+  transform: scale(0.9);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.project-info-parent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-info-parent h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4de6a6;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.project-info-parent h3 {
+  color: #e6e6e6;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+/* CONTACT SECTION--- */
+.contact-main-container {
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-main-container h2 {
+  font-weight: 400;
+  font-size: 25px;
+  color: #e6e6e6;
+  margin-bottom: 3.5rem;
+}
+
+.contactInfo-flex {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.contactLinks-parent {
+  width: 30%;
+}
+
+.contact-header {
+  color: #e6e6e6;
+  font-weight: 400;
+  font-size: 25px;
+  margin: 2rem 0;
+}
+
+.contactLinks-parent p {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  color: #999999;
+  margin-bottom: 15px;
+}
+
+#contact-fsz-id {
+  font-weight: 200;
+}
+
+.form-container {
+  width: 70%;
+}
+
+.form-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.name-email-flexHolder {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.infoInput-holder input {
+  background-color: #1a1a1a;
+  color: #999999;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  height: 7vh;
+  width: 282px;
+}
+
+.infoInput-holder textarea {
+  background-color: #1a1a1a;
+  color: #999999;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  width: 36rem;
+  height: 250px;
+}
+.infoInput-holder input::placeholder,
+.infoInput-holder textarea::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+.form-holder button {
+  cursor: pointer;
+  width: 36rem;
+  padding: 10px 0;
+  border: none;
+  background-color: #4de6a6;
+  color: #050505;
+  border-radius: 8px;
 }
 
 /* Media Queries---  */
@@ -282,11 +501,52 @@ font-size: 18px;
   .connectionNote-parent p {
     font-size: 12px;
   }
+  .projects-parent {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .project-holder span {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .contactInfo-flex {
+    flex-direction: column;
+  }
+  .contactLinks-parent {
+    width: 100%;
+  }
+  .form-container {
+    width: 100%;
+  }
+  .infoInput-holder input {
+    width: 100%;
+  }
+
+  .infoInput-holder textarea {
+    width: 100%;
+  }
+  .form-holder button {
+    width: 100%;
+  }
+  .name-email-flexHolder {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 850px) {
   .homepage-main-container span {
     width: 100%;
+  }
+  .each-tech-kit {
+    height: max-content;
   }
 }
 
@@ -306,5 +566,10 @@ font-size: 18px;
   }
   .main-content {
     padding: 3rem 1rem 5rem 1rem;
+  }
+
+  .each-tech-kit {
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
   }
 }
