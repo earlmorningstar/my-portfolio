@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "emailjs-com";
 
 import { AiFillMail } from "react-icons/ai";
 import { MdLocalPhone } from "react-icons/md";
@@ -15,10 +16,26 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", { name, email, message });
-    setName("");
-    setEmail("");
-    setMessage("");
+
+    const templateParams = {
+      name: name,
+      email: email,
+      message: message,
+    };
+
+    emailjs
+      .send("service_x8h029h", "template_saic1bm", templateParams, "MHe-GqAhpg2rVTW_W")
+      .then(
+        (response) => {
+          console.log("Email sent successfully!", response.status, response.text);
+          setName("");
+          setEmail("");
+          setMessage("");
+        },
+        (error) => {
+          console.log("Error sending email:", error);
+        }
+      );
   };
 
   return (
@@ -29,29 +46,129 @@ function Contact() {
         <div className="contactLinks-parent">
           <h4 className="contact-header">Contact</h4>
           <p id="contact-fsz-id">
-            <AiFillMail size={15} color="#999999" /> earlmorningstar@gmail.com
+            <a
+              href="mailto:earlmorningstar@gmail.com"
+              style={{
+                color: "#999999",
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <AiFillMail size={15} color="#999999" />{" "}
+              <span style={{ marginLeft: "0.5rem" }}>
+                earlmorningstar@gmail.com
+              </span>
+            </a>
           </p>
           <p id="contact-fsz-id">
-            <MdLocalPhone size={15} color="#999999" /> +234 903 573 6627
+            <a
+              href="https://wa.me/2349035736627"
+              style={{
+                color: "#999999",
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <MdLocalPhone size={15} color="#999999" />{" "}
+              <span style={{ marginLeft: "0.5rem" }}>+234 903 573 6627</span>
+            </a>
           </p>
           <h4 className="contact-header">My Online Presence</h4>
           <p>
-            <FaXTwitter size={15} color="#999999" /> Twitter
+            <a
+              href="https://twitter.com/earlmorningsta1"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "#999999",
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <FaXTwitter size={15} color="#999999" />{" "}
+              <span style={{ marginLeft: "0.5rem" }}>Twitter</span>
+            </a>
           </p>
           <p>
-            <IoLogoInstagram size={15} color="#999999" /> Instagram
+            <a
+              href="https://instagram.com/earlmorningstar"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "#999999",
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <IoLogoInstagram size={15} color="#999999" />{" "}
+              <span style={{ marginLeft: "0.5rem" }}>Instagram</span>
+            </a>
           </p>
           <p>
-            <SiGithub size={15} color="#999999" /> Github
+            <a
+              href="https://github.com/earlmorningstar"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "#999999",
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <SiGithub size={15} color="#999999" />{" "}
+              <span style={{ marginLeft: "0.5rem" }}>Github</span>
+            </a>
           </p>
           <p>
-            <AiFillLinkedin size={15} color="#999999" /> LinkedIn
+            <a
+              href="https://linkedin.com/in/joel-onyeabor"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "#999999",
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <AiFillLinkedin size={15} color="#999999" />{" "}
+              <span style={{ marginLeft: "0.5rem" }}>LinkedIn</span>
+            </a>
           </p>
           <p>
-            <SiSubstack size={15} color="#999999" /> Substack
+            <a
+              href="https://earlmorningstar.substack.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "#999999",
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <SiSubstack size={15} color="#999999" />{" "}
+              <span style={{ marginLeft: "0.5rem" }}>Substack</span>
+            </a>
           </p>
           <p>
-            <AiFillMail size={15} color="#999999" /> Mail
+            <a
+              href="mailto:earlmorningstar@gmail.com"
+              style={{
+                color: "#999999",
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <AiFillMail size={15} color="#999999" />{" "}
+              <span style={{ marginLeft: "0.5rem" }}>Mail</span>
+            </a>
           </p>
         </div>
 

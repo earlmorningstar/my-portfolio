@@ -267,35 +267,31 @@ font-family: "Raleway", sans-serif; */
   margin-bottom: 1.5rem;
 }
 
-/* #tech-kit-Parent-id {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
-#each-tech-kit-id {
-  justify-content: center;
-  height: 7rem;
-  padding: 1rem;
-  width: 300px;
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-#each-tech-kit-id span img {
-  width: 50px;
-  height: 50px;
-  margin-top: 8px
-}
-
-#stack-image-id {
+.hp-tech-kit-Parent {
+  font-family: "Poppins", sans-serif;
   width: 100%;
-  object-fit: contain;
-  border-radius: 7%;
-} */
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 6rem;
+}
+
+.hp-each-tech-kit {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #1a1a1a; 
+  width: 320px;
+  width: 100%;
+  height: 7rem;
+  padding: 1rem .5rem;
+  border-radius: 10px;
+}
+
+.hp-each-tech-kit span img{
+  margin-top: 10px;
+  width: 50px;
+  height: auto;
+}
 
 .each-tech-kit span img {
   width: 50px;
@@ -396,6 +392,10 @@ font-family: "Raleway", sans-serif; */
   color: #e6e6e6;
   font-size: 21px;
   font-weight: 500;
+}
+
+.project-holder-link {
+  text-decoration: none;
 }
 
 /* CONTACT SECTION--- */
@@ -606,6 +606,16 @@ font-family: "Raleway", sans-serif; */
   }
   .name-email-flexHolder {
     flex-direction: column;
+  }
+
+  .hp-tech-kit-Parent {
+    flex-direction: column;
+  }
+  
+  .hp-each-tech-kit {
+    width: 350px;
+    justify-content: start;
+    padding: 1rem;
   }
 }
 
