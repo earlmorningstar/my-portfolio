@@ -2,6 +2,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { PiDesktopTowerFill } from "react-icons/pi";
 import { MdCastForEducation } from "react-icons/md";
 import ConnectionNote from "./ConnectionNote";
+import { PiDotBold } from "react-icons/pi";
 
 function About() {
   return (
@@ -75,28 +76,28 @@ function About() {
         <section className="aboutpage-detailParent">
           <h3>Experience</h3>
 
-          <div id="aboutpage-detailHolder">
+          {/* <div id="aboutpage-detailHolder">
             <h3>
               <PiDesktopTowerFill size={16} color="#999999" />
               Frontend Software Engineer
             </h3>
             <p>Fiver Contract, Start Date- End Date</p>
+          </div> */}
+
+          <div id="aboutpage-detailHolder">
+            <h3>
+              <PiDesktopTowerFill size={16} color="#999999" />
+              Junior Frontend Software Engineer
+            </h3>
+            <p>Crossover<PiDotBold /> Contract, Dec 2023 - Aug 2024</p>
           </div>
 
           <div id="aboutpage-detailHolder">
             <h3>
               <PiDesktopTowerFill size={16} color="#999999" />
-              Frontend Software Engineer
+              Junior Frontend Engineer
             </h3>
-            <p>Fiver Contract, Start Date- End Date</p>
-          </div>
-
-          <div id="aboutpage-detailHolder">
-            <h3>
-              <PiDesktopTowerFill size={16} color="#999999" />
-              Frontend Software Engineer
-            </h3>
-            <p>Fiver Contract, Start Date- End Date</p>
+            <p>Fiver<PiDotBold /> Contract, Feb 2023 - Oct 2023</p>
           </div>
         </section>
 
@@ -136,7 +137,7 @@ function About() {
               <MdCastForEducation size={16} color="#999999" />
               Axia Africa School Of Engineering
             </h3>
-            <p>Certificate in Front-End Development, 2021 - 2022</p>
+            <p>Certificate in Front-End Development, Dec 2021 - Sept 2022</p>
           </div>
         </section>
 

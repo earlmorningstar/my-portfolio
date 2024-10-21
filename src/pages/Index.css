@@ -237,6 +237,8 @@ font-family: "Raleway", sans-serif; */
 }
 
 #aboutpage-detailHolder p {
+  display: flex;
+  align-items: center;
   font-size: 15px;
   font-weight: 200;
   color: #999999;
@@ -279,15 +281,15 @@ font-family: "Raleway", sans-serif; */
   display: flex;
   justify-content: center;
   gap: 1rem;
-  background-color: #1a1a1a; 
+  background-color: #1a1a1a;
   width: 320px;
   width: 100%;
   height: 7rem;
-  padding: 1rem .5rem;
+  padding: 1rem 0.5rem;
   border-radius: 10px;
 }
 
-.hp-each-tech-kit span img{
+.hp-each-tech-kit span img {
   margin-top: 10px;
   width: 50px;
   height: auto;
@@ -385,6 +387,12 @@ font-family: "Raleway", sans-serif; */
   align-items: center;
   color: #4de6a6;
   font-size: 14px;
+  font-weight: 300;
+}
+
+.project-info-parent h5 {
+  color: #999999;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -611,7 +619,7 @@ font-family: "Raleway", sans-serif; */
   .hp-tech-kit-Parent {
     flex-direction: column;
   }
-  
+
   .hp-each-tech-kit {
     width: 350px;
     justify-content: start;

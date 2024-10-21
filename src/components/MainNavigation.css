@@ -21,7 +21,7 @@
 
 .profile-image {
   width: 100%;
-  height: auto;
+  height: 25vh;
   object-fit: contain;
   border-radius: 7%;
 }

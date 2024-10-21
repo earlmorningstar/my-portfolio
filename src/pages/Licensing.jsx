@@ -7,12 +7,12 @@ function Licensing() {
   <div className="licensing-mainContainer">
     <h2>Licensing</h2>
     <div>
-      <h3>Frontend Framwork</h3>
+      <h3>Frontend Framework</h3>
       <p><FaReact size={14}/>React</p>
-      <h3>Arsenal of Icons</h3>
-      <p><FaReact size={14}/>React Icons</p>
       <h3>Typography</h3>
       <p><IoLogoGoogle size={14}/>Google Fonts</p>
+      <h3>Arsenal of Icons</h3>
+      <p><FaReact size={14}/>React Icons</p>
     </div>
 
   </div>

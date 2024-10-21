@@ -7,35 +7,41 @@ export const projectItems = [
     projectType: "WEB APPLICATION",
     title: "Grace Guide",
     url: "https://graceguide.vercel.app/",
+    stack: "React"
   },
   {
     image: "/images/espresso-two-img.png",
     projectType: "E-COMMERCE WEB APPLICATION",
     title: "Espresso Amore",
     url: "https://espressoamore.vercel.app/",
+    stack: "React"
   },
   {
     image: "/images/kubeInsight-img.png",
     projectType: "WEB APPLICATION",
     title: "KubeInsight",
     url: "https://kubeinsights.vercel.app/",
+    stack: "React"
   },
   {
-    image: "/images/interity-img.png",
+    image: "/images/interity-img22.png",
     projectType: "WEB APPLICATION",
     title: "Interity",
     url: "https://interity-six.vercel.app",
+    stack: "React"
   },
-  //   {
-  //     image: "/images/interity-img.png",
-  //     projectType: "WEB APPLICATION",
-  //     title: "Interity",
-  //   },
-  //   {
-  //     image: "/images/interity-img.png",
-  //     projectType: "WEB APPLICATION",
-  //     title: "Interity",
-  //   },
+    {
+      image: "/images/projectManagementApp-img.png",
+      projectType: " TASK MANAGEMENT APPLICATION",
+      title: "Project Management App",
+      url: "https://project-management-app-orcin-two.vercel.app",
+      stack: "React, Tailwind CSS"
+    },
+    // {
+    //   image: "/images/interity-img.png",
+    //   projectType: "WEB APPLICATION",
+    //   title: "Interity",
+    // },
 ];
 
 function Projects() {
@@ -66,6 +72,7 @@ function Projects() {
                     {item.projectType} <IoMdArrowForward size={25} />
                   </h4>
                   <h3>{item.title}</h3>
+                  <h5>Stack: {item.stack}</h5>
                 </div>
               </div>
             </a>

@@ -24,7 +24,7 @@ function MainNavigation() {
         <div className="profile-section">
           <span>
             <img
-              src="/images/passport.jpg"
+              src="/images/portfolio-handle-img.jpeg"
               alt="Profile"
               className="profile-image"
             />
