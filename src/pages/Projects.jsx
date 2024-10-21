@@ -37,11 +37,13 @@ export const projectItems = [
       url: "https://project-management-app-orcin-two.vercel.app",
       stack: "React, Tailwind CSS"
     },
-    // {
-    //   image: "/images/interity-img.png",
-    //   projectType: "WEB APPLICATION",
-    //   title: "Interity",
-    // },
+    {
+      image: "/images/port-img.png",
+      projectType: "WEB APPLICATION",
+      title: "My Portfolio",
+      url: "https://my-portfolio-three-blue-58.vercel.app",
+      stack: "React"
+    },
 ];
 
 function Projects() {
