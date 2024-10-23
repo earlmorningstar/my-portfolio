@@ -22,7 +22,7 @@ function About() {
           <p>
             {" "}
             I’m a Front-End Developer with a robust foundation in JavaScript,
-            React, CSS, Node.js, Next.js, Git and more, complemented by my background as an
+            React, CSS, Next.js, Git and more, complemented by my background as an
             Accounting graduate. This unique blend of finance and technology
             empowers me to create user-friendly interfaces that enhance the user
             experience while meeting client specifications. My passion for web
@@ -76,26 +76,10 @@ function About() {
         <section className="aboutpage-detailParent">
           <h3>Experience</h3>
 
-          {/* <div id="aboutpage-detailHolder">
-            <h3>
-              <PiDesktopTowerFill size={16} color="#999999" />
-              Frontend Software Engineer
-            </h3>
-            <p>Fiver Contract, Start Date- End Date</p>
-          </div> */}
-
           <div id="aboutpage-detailHolder">
             <h3>
               <PiDesktopTowerFill size={16} color="#999999" />
               Junior Frontend Software Engineer
-            </h3>
-            <p>Crossover<PiDotBold /> Contract, Dec 2023 - Aug 2024</p>
-          </div>
-
-          <div id="aboutpage-detailHolder">
-            <h3>
-              <PiDesktopTowerFill size={16} color="#999999" />
-              Junior Frontend Engineer
             </h3>
             <p>Fiver<PiDotBold /> Contract, Feb 2023 - Oct 2023</p>
           </div>
@@ -108,7 +92,7 @@ function About() {
 
           <div className="aboutpage-note">
             <p>
-              I possess a robust skill set in JavaScript, React, CSS, Node.js,
+              I possess a robust skill set in JavaScript, React, CSS,
               Git, and more, empowering me to develop dynamic web applications
               characterized by responsive designs and outstanding user
               experiences. My commitment lies in delivering high-performance

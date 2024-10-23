@@ -55,7 +55,7 @@ function MainNavigation() {
             Home
           </NavLink>
 
-          <NavLink
+          {/* <NavLink
             className={({ isActive }) =>
               isActive ? "navlinks active" : "navlinks"
             }
@@ -63,7 +63,7 @@ function MainNavigation() {
           >
             <LiaBlogSolid size={16} />
             Blog
-          </NavLink>
+          </NavLink> */}
 
           <NavLink
             className={({ isActive }) =>
@@ -130,7 +130,7 @@ function MainNavigation() {
               Home
             </NavLink>
 
-            <NavLink
+            {/* <NavLink
               className={({ isActive }) =>
                 isActive ? "navlinks active" : "navlinks"
               }
@@ -138,7 +138,7 @@ function MainNavigation() {
             >
               <LiaBlogSolid size={16} />
               Blog
-            </NavLink>
+            </NavLink> */}
 
             <NavLink
               className={({ isActive }) =>

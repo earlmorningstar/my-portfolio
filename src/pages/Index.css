@@ -349,7 +349,7 @@ font-family: "Raleway", sans-serif; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-row-gap: 40px;
   margin-bottom: 4rem;
 }
 
@@ -359,7 +359,7 @@ font-family: "Raleway", sans-serif; */
   flex-direction: column;
 }
 
-.project-holder span {
+/* .project-holder span {
   height: auto;
   margin-bottom: 10px;
   transition: transform 0.5s ease-in-out;
@@ -367,12 +367,27 @@ font-family: "Raleway", sans-serif; */
 
 .project-holder span:hover {
   transform: scale(0.9);
+} */
+
+.project-image-holder{
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.project-image-holder:hover {
+  transform: scale(0.9);
 }
 
 .project-image {
   width: 100%;
   height: auto;
   object-fit: contain;
+  transition: transform 0.5s ease-in-out;
+}
+
+.project-image:hover {
+  transform: scale(0.9);
 }
 
 .project-info-parent {
@@ -381,7 +396,7 @@ font-family: "Raleway", sans-serif; */
   gap: 0.5rem;
 }
 
-.project-info-parent h4 {
+.project-holder-link h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -394,6 +409,16 @@ font-family: "Raleway", sans-serif; */
   color: #999999;
   font-size: 16px;
   font-weight: 300;
+}
+
+.git-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #999999;
+  font-size: 10px;
+  font-weight: 300;
+  text-decoration: none;
 }
 
 .project-info-parent h3 {
@@ -534,6 +559,30 @@ font-family: "Raleway", sans-serif; */
   color: #999999;
   font-weight: 200;
   font-size: 15px;
+}
+
+/* ERROR PAGE SECTION -- */
+.error-page-main {
+  font-family: "Raleway", sans-serif;
+  background-color: #050505;
+  height: 100vh;
+  color: #e6e6e6;
+  padding: 5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  justify-content: start;
+}
+
+.errorPage-btn {
+  cursor: pointer;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 8px;
+  color: #050505;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 /* Media Queries---  */

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
-
 import { AiFillMail } from "react-icons/ai";
 import { MdLocalPhone } from "react-icons/md";
 import { IoLogoInstagram } from "react-icons/io";
@@ -24,10 +23,19 @@ function Contact() {
     };
 
     emailjs
-      .send("service_x8h029h", "template_saic1bm", templateParams, "MHe-GqAhpg2rVTW_W")
+      .send(
+        "service_x8h029h",
+        "template_saic1bm",
+        templateParams,
+        "MHe-GqAhpg2rVTW_W"
+      )
       .then(
         (response) => {
-          console.log("Email sent successfully!", response.status, response.text);
+          console.log(
+            "Email sent successfully!",
+            response.status,
+            response.text
+          );
           setName("");
           setEmail("");
           setMessage("");
@@ -47,7 +55,7 @@ function Contact() {
           <h4 className="contact-header">Contact</h4>
           <p id="contact-fsz-id">
             <a
-              href="mailto:earlmorningstar@gmail.com"
+              href="mailto:sayhitojoelinton@gmail.com"
               style={{
                 color: "#999999",
                 textDecoration: "none",
@@ -57,7 +65,7 @@ function Contact() {
             >
               <AiFillMail size={15} color="#999999" />{" "}
               <span style={{ marginLeft: "0.5rem" }}>
-                earlmorningstar@gmail.com
+                sayhitojoelinton@gmail.com
               </span>
             </a>
           </p>
@@ -158,7 +166,7 @@ function Contact() {
           </p>
           <p>
             <a
-              href="mailto:earlmorningstar@gmail.com"
+              href="mailto:sayhitojoelinton@gmail.com"
               style={{
                 color: "#999999",
                 textDecoration: "none",

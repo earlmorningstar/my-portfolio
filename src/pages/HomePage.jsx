@@ -1,15 +1,15 @@
 import "./Index.css";
-import DispatchItem from "./DispatchItem";
+// import DispatchItem from "./DispatchItem";
 import { projectItems } from "./Projects";
 import { IoMdArrowForward } from "react-icons/io";
 import { techItems } from "./StackPage";
 import ConnectionNote from "./ConnectionNote";
 
 function HomePage() {
-  const dispatchItems = Array(12).fill({
-    image: "/images/silhouette.jfif",
-    text: "This is an inspirational quote for you to improve yourself and get better. Fight until the end.",
-  });
+  // const dispatchItems = Array(12).fill({
+  //   image: "/images/silhouette.jfif",
+  //   text: "This is an inspirational quote for you to improve yourself and get better. Fight until the end.",
+  // });
 
   return (
     <>
@@ -23,15 +23,15 @@ function HomePage() {
           </h4>
         </span>
 
-        <span>
+        {/* <span>
           <h3>Recent Dispatch</h3>
-        </span>
+        </span> */}
 
-        <div className="latest-dispatch-container">
+        {/* <div className="latest-dispatch-container">
           {dispatchItems.slice(0, 3).map((item, index) => (
             <DispatchItem key={index} image={item.image} text={item.text} />
           ))}
-        </div>
+        </div> */}
 
         <span>
           <h3>Recent Deployment</h3>
