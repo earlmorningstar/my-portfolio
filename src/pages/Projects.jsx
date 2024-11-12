@@ -35,14 +35,14 @@ export const projectItems = [
     stack: "React, Tailwind CSS",
     githubURL: "https://github.com/earlmorningstar/managementApp",
   },
-  // {
-  //   image: "/images/chronicleHub.png",
-  //   projectType: "WEB APPLICATION",
-  //   title: "Chronicle Hub",
-  //   url: "https://chroniclehub.vercel.app",
-  //   stack: "React",
-  //   githubURL: "https://github.com/earlmorningstar/chroniclehub",
-  // },
+  {
+    image: "/images/chronicleHub.png",
+    projectType: "WEB APPLICATION",
+    title: "Chronicle Hub",
+    url: "https://github.com/earlmorningstar/chroniclehub",
+    stack: "React",
+    githubURL: "https://github.com/earlmorningstar/chroniclehub",
+  },
   {
     image: "/images/kubeInsight-img.png",
     projectType: "WEB APPLICATION",
