@@ -17,7 +17,7 @@ function HomePage() {
         <span id="hp-mainContainer-span-id">
           <h3>Hey, I'm Joel,</h3>
           <h4>
-            I'm a software developer and writer passionate about technology,
+            I'm a frontend web developer and writer passionate about technology,
             creativity, and building meaningful connections through code and
             words.
           </h4>

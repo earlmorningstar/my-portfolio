@@ -20,6 +20,30 @@ export const projectItems = [
     githubURL: "https://github.com/earlmorningstar/espressoamore",
   },
   {
+    image: "/images/port-img.png",
+    projectType: "WEB APPLICATION",
+    title: "My Portfolio",
+    url: "https://my-portfolio-three-blue-58.vercel.app",
+    stack: "React",
+    githubURL: "https://github.com/earlmorningstar/my-portfolio",
+  },
+  {
+    image: "/images/projectManagementApp-img.png",
+    projectType: " TASK MANAGEMENT APPLICATION",
+    title: "Project Management App",
+    url: "https://project-management-app-orcin-two.vercel.app",
+    stack: "React, Tailwind CSS",
+    githubURL: "https://github.com/earlmorningstar/managementApp",
+  },
+  // {
+  //   image: "/images/chronicleHub.png",
+  //   projectType: "WEB APPLICATION",
+  //   title: "Chronicle Hub",
+  //   url: "https://chroniclehub.vercel.app",
+  //   stack: "React",
+  //   githubURL: "https://github.com/earlmorningstar/chroniclehub",
+  // },
+  {
     image: "/images/kubeInsight-img.png",
     projectType: "WEB APPLICATION",
     title: "KubeInsight",
@@ -34,22 +58,6 @@ export const projectItems = [
     url: "https://interity-six.vercel.app",
     stack: "React",
     githubURL: "https://github.com/earlmorningstar/Interity",
-  },
-  {
-    image: "/images/projectManagementApp-img.png",
-    projectType: " TASK MANAGEMENT APPLICATION",
-    title: "Project Management App",
-    url: "https://project-management-app-orcin-two.vercel.app",
-    stack: "React, Tailwind CSS",
-    githubURL: "https://github.com/earlmorningstar/managementApp",
-  },
-  {
-    image: "/images/port-img.png",
-    projectType: "WEB APPLICATION",
-    title: "My Portfolio",
-    url: "https://my-portfolio-three-blue-58.vercel.app",
-    stack: "React",
-    githubURL: "https://github.com/earlmorningstar/my-portfolio",
   },
 ];
 
