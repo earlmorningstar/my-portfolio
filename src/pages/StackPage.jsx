@@ -15,13 +15,13 @@ export const techItems = [
     description:
       "JavaScript is a high-level, interpreted language that supports event-driven, functional, and imperative programming styles.",
   },
-  {
-    image: "/images/nextjs.jpg",
-    title: "Next.js",
-    subtitle: "React Framework",
-    description:
-      "Next.js is a React framework that provides advanced features like server-side rendering and static site generation, enhancing React-based web applications with improved performance and SEO capabilities.",
-  },
+  // {
+  //   image: "/images/nextjs.jpg",
+  //   title: "Next.js",
+  //   subtitle: "React Framework",
+  //   description:
+  //     "Next.js is a React framework that provides advanced features like server-side rendering and static site generation, enhancing React-based web applications with improved performance and SEO capabilities.",
+  // },
   {
     image: "/images/tailwind-removebg-preview.png",
     title: "Tailwind CSS",
