@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { GoDotFill } from "react-icons/go";
 import { MdHomeFilled } from "react-icons/md";
-import { LiaBlogSolid } from "react-icons/lia";
 import { CgProfile } from "react-icons/cg";
 import { SiDatabricks } from "react-icons/si";
 import { PiWallLight } from "react-icons/pi";

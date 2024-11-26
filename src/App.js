@@ -1,13 +1,16 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import RootLayout from "./pages/RootLayout";
-import ErrorPage from "./pages/ErrorPage";
-import HomePage from "./pages/HomePage";
-// import BlogPage from "./pages/BlogPage";
-import About from "./pages/About";
-import StackPage from "./pages/StackPage";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
-import Licensing from "./pages/Licensing";
+import { Suspense, lazy } from "react";
+import Fallback from "./components/Fallback";
+
+const RootLayout = lazy(() => import("./pages/RootLayout"));
+const ErrorPage = lazy(() => import("./pages/ErrorPage"));
+const HomePage = lazy(() => import("./pages/HomePage"));
+// const BlogPage = lazy(() => import ("./pages/BlogPage"));
+const About = lazy(() => import("./pages/About"));
+const StackPage = lazy(() => import("./pages/StackPage"));
+const Projects = lazy(() => import("./pages/Projects"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Licensing = lazy(() => import("./pages/Licensing"));
 
 const router = createBrowserRouter([
   {
@@ -29,7 +32,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <Suspense fallback={<Fallback />}>
+        <RouterProvider router={router} />
+      </Suspense>
     </>
   );
 }

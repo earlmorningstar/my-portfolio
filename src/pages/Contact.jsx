@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import { Alert, Stack } from "@mui/material";
 import { AiFillMail } from "react-icons/ai";
 import { MdLocalPhone } from "react-icons/md";
 import { IoLogoInstagram } from "react-icons/io";
@@ -12,9 +13,13 @@ function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [feedback, setFeedback] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
+    setFeedback({ type: "", message: "" });
 
     const templateParams = {
       name: name,
@@ -24,10 +29,10 @@ function Contact() {
 
     emailjs
       .send(
-        "service_x8h029h",
-        "template_saic1bm",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         templateParams,
-        "MHe-GqAhpg2rVTW_W"
+        process.env.REACT_APP_EMAILJS_USER_ID
       )
       .then(
         (response) => {
@@ -36,14 +41,28 @@ function Contact() {
             response.status,
             response.text
           );
+          setFeedback({
+            type: "success",
+            message: "Your message has been sent successfully!",
+          });
           setName("");
           setEmail("");
           setMessage("");
         },
         (error) => {
-          console.log("Error sending email:", error);
+          console.error("Error sending email:", error);
+          setFeedback({
+            type: "error",
+            message: "Failed to your message. Please try again.",
+          });
         }
-      );
+      )
+      .finally(() => {
+        setLoading(false);
+        setTimeout(() => {
+          setFeedback({ type: "", message: "" });
+        }, 4000);
+      });
   };
 
   return (
@@ -216,7 +235,16 @@ function Contact() {
                 required
               ></textarea>
             </div>
-            <button type="submit">Send</button>
+            <button type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Send"}
+            </button>
+            {feedback.type && (
+              <Stack>
+                <Alert className="alert-ui" severity={feedback.type}>
+                  {feedback.message}
+                </Alert>
+              </Stack>
+            )}
           </form>
         </div>
       </div>

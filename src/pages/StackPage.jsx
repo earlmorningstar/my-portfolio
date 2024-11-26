@@ -15,13 +15,27 @@ export const techItems = [
     description:
       "JavaScript is a high-level, interpreted language that supports event-driven, functional, and imperative programming styles.",
   },
-  // {
-  //   image: "/images/nextjs.jpg",
-  //   title: "Next.js",
-  //   subtitle: "React Framework",
-  //   description:
-  //     "Next.js is a React framework that provides advanced features like server-side rendering and static site generation, enhancing React-based web applications with improved performance and SEO capabilities.",
-  // },
+  {
+    image: "/images/typescript.jpg",
+    title: "typescript",
+    subtitle: "Programming Language",
+    description:
+      "TypeScript is a programming language that enhances JavaScript by introducing optional static types, improving code quality and maintainability.",
+  },
+  {
+    image: "/images/nodejs.png",
+    title: "Node.js",
+    subtitle: "JavaScript Runtime",
+    description:
+      "Node.js is a JavaScript runtime built on Chrome's V8 engine, allowing developers to run JavaScript on the server-side for building scalable and high-performance applications.",
+  },
+  {
+    image: "/images/mongodb.png",
+    title: "MongoDB",
+    subtitle: "Database",
+    description:
+      "MongoDB is a NoSQL database that stores data in flexible, JSON-like documents, making it easy to scale and handle large volumes of unstructured data.",
+  },
   {
     image: "/images/tailwind-removebg-preview.png",
     title: "Tailwind CSS",
