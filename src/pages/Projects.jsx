@@ -4,6 +4,22 @@ import { SiGithub } from "react-icons/si";
 
 export const projectItems = [
   {
+    image: "/images/trendVault-1.png",
+    projectType: "E-COMMERCE WEB APPLICATION",
+    title: "Trend Vault",
+    url: "https://codsoft-trendvault.vercel.app",
+    stack: "MERN",
+    githubURL: "https://github.com/earlmorningstar/CODSOFT",
+  },
+  {
+    image: "/images/projectMgtToolImg.png",
+    projectType: "PROJECT MANAGEMENT APPLICATION",
+    title: "Project Management App",
+    url: "https://codsoft-projectmgtapp.vercel.app/",
+    stack: "React",
+    githubURL: "https://github.com/earlmorningstar/CODSOFT",
+  },
+  {
     image: "/images/graceGuide-img.png",
     projectType: "WEB APPLICATION",
     title: "Grace Guide",
@@ -18,14 +34,6 @@ export const projectItems = [
     url: "https://espressoamore.vercel.app/",
     stack: "React",
     githubURL: "https://github.com/earlmorningstar/espressoamore",
-  },
-  {
-    image: "/images/projectMgtToolImg.png",
-    projectType: "PROJECT MANAGEMENT APPLICATION",
-    title: "Project Management App",
-    url: "https://codsoft-projectmgtapp.vercel.app/",
-    stack: "React",
-    githubURL: "https://github.com/earlmorningstar/CODSOFT",
   },
   {
     image: "/images/port-img.png",

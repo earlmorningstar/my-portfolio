@@ -10,7 +10,7 @@ function About() {
       <div className="aboutpage-main-container">
         <span className="aboutpage-headers-holder">
           <h4>Service Overview</h4>
-          <h2>Who is Joel Onyeabor?</h2>
+          <h2>Joel Onyeabor???</h2>
           <h5>
             Just an enthusiastic developer passionate about coding,
             problem-solving, the mind, and fitness.
@@ -22,7 +22,8 @@ function About() {
           <p>
             {" "}
             I’m a Front-End Developer with a robust foundation in JavaScript,
-            React, CSS, Next.js, Git and more, complemented by my background as an
+            React, CSS, Next.js, Git, Shopify Integration/Development/API
+            implementation and more, complemented by my background as an
             Accounting graduate. This unique blend of finance and technology
             empowers me to create user-friendly interfaces that enhance the user
             experience while meeting client specifications. My passion for web
@@ -31,22 +32,22 @@ function About() {
           </p>{" "}
           <p>
             {" "}
-            With a keen eye for detail and a strong understanding of financial
+            With a sharp eye for detail and a solid grasp of financial
             principles, I bridge the gap between finance and technology. I
-            approach problem-solving with tenacity, relishing the challenge of
-            dissecting complex issues and crafting elegant, efficient solutions.
-            My proficiency in Figma ensures that I can align design and
-            implementation, maintaining functionality while ensuring every pixel
-            reflects the intended vision.{" "}
+            tackle problem-solving with tenacity, thriving on the challenge of
+            breaking down complex issues and crafting elegant, efficient
+            solutions. My proficiency in Figma allows me to seamlessly align
+            design and implementation, ensuring functionality while delivering
+            pixel-perfect visuals.{" "}
           </p>{" "}
           <p>
             {" "}
-            I am an avid reader and researcher, committed to staying informed
-            about the latest trends in technology and design. This habit fuels
-            my creativity and equips me to make informed decisions that benefit
-            both the team and end-users. I’m constantly seeking knowledge
-            through online courses, workshops, and the latest industry articles,
-            all of which enrich my professional journey.{" "}
+            I am an avid reader and researcher, dedicated to staying updated on
+            the latest trends in technology and design. This habit fuels my
+            creativity and empowers me to make informed decisions that benefit
+            both the team and end-users. I actively pursue growth through online
+            courses, workshops, and industry articles, continually enriching my
+            professional journey.{" "}
           </p>{" "}
           <p>
             {" "}
@@ -81,7 +82,10 @@ function About() {
               <PiDesktopTowerFill size={16} color="#999999" />
               Junior Frontend Software Engineer
             </h3>
-            <p>Fiver<PiDotBold /> Contract, Feb 2023 - Oct 2023</p>
+            <p>
+              Fiver
+              <PiDotBold /> Contract, Feb 2023 - Oct 2023
+            </p>
           </div>
         </section>
 
@@ -92,13 +96,13 @@ function About() {
 
           <div className="aboutpage-note">
             <p>
-              I possess a robust skill set in JavaScript, React, CSS,
-              Git, and more, empowering me to develop dynamic web applications
-              characterized by responsive designs and outstanding user
-              experiences. My commitment lies in delivering high-performance
-              solutions that seamlessly integrate functionality with a refined
-              aesthetic, ensuring that every project I undertake contributes
-              meaningful value to the team.
+              I have a strong skill set in JavaScript, React, CSS, Git, and
+              other modern technologies, enabling me to build dynamic web
+              applications with responsive designs and exceptional user
+              experiences. I am committed to delivering high-performance
+              solutions that combine functionality with a refined aesthetic,
+              ensuring every project I undertake adds meaningful value to the
+              team.
             </p>
           </div>
         </section>
