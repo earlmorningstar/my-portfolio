@@ -16,7 +16,7 @@ export const projectItems = [
     projectType: "PROJECT MANAGEMENT APPLICATION",
     title: "Project Management App",
     url: "https://codsoft-projectmgtapp.vercel.app/",
-    stack: "React",
+    stack: "MERN",
     githubURL: "https://github.com/earlmorningstar/CODSOFT",
   },
   {
