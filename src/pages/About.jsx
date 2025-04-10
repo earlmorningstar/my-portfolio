@@ -1,8 +1,8 @@
 import { IoLocationSharp } from "react-icons/io5";
-import { PiDesktopTowerFill } from "react-icons/pi";
+// import { PiDesktopTowerFill } from "react-icons/pi";
 import { MdCastForEducation } from "react-icons/md";
 import ConnectionNote from "./ConnectionNote";
-import { PiDotBold } from "react-icons/pi";
+// import { PiDotBold } from "react-icons/pi";
 
 function About() {
   return (
