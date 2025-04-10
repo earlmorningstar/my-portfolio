@@ -32,19 +32,42 @@ font-family: "Raleway", sans-serif; */
   border-right: 1px solid #464545;
 }
 
+@keyframes panGrid {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
 .main-content {
   width: 80%;
-  background-color: #050505;
   padding: 5rem 2rem;
   overflow-y: auto;
+
+  background-color: #050505;
+
+  background-image: linear-gradient(
+      transparent 0%,
+      transparent 95%,
+      hsla(0, 0%, 100%, 0.08) 95%,
+      hsla(0, 0%, 100%, 0.08) 100%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent 95%,
+      hsla(0, 0%, 100%, 0.08) 95%,
+      hsla(0, 0%, 100%, 0.08) 100%
+    );
+
+  background-size: 20px 20px;
+  background-repeat: repeat;
+  animation: panGrid 15s linear infinite;
 }
 
 /* HOMEPAGE SECTION--- */
-
-.homepage-main-container {
-  background-color: #050505;
-  /* color: #ffffff; */
-}
 
 .homepage-main-container span {
   display: flex;
@@ -59,15 +82,15 @@ font-family: "Raleway", sans-serif; */
 }
 
 .homepage-main-container span > h3 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 25px;
 }
 
 .homepage-main-container span > h4 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 35px;
   line-height: 45px;
 }
 
@@ -122,7 +145,7 @@ font-family: "Raleway", sans-serif; */
 }
 
 .blogpage-main-container h3 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 25px;
   margin-bottom: 6rem;
@@ -130,7 +153,6 @@ font-family: "Raleway", sans-serif; */
 
 /* CONNECTION NOTE-- */
 .connectionNote-parent {
-  font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -138,11 +160,13 @@ font-family: "Raleway", sans-serif; */
 }
 
 .connectionNote-parent div {
+  font-family: "Raleway", sans-serif;
   font-size: 48px;
   color: #e6e6e6;
 }
 
 .connectionNote-parent p {
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   color: #999999;
 }
@@ -150,7 +174,7 @@ font-family: "Raleway", sans-serif; */
 /* ABOUT PAGE---  */
 
 .aboutpage-main-container {
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -249,7 +273,7 @@ font-family: "Raleway", sans-serif; */
 /* STACKPAGE SECTION---- */
 
 .stackpage-main-container {
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .stackpage-main-container h3 {
@@ -335,7 +359,7 @@ font-family: "Raleway", sans-serif; */
 /* PROJECT SECTION--- */
 
 .projects-main-container {
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .projects-main-container h2 {
@@ -345,7 +369,7 @@ font-family: "Raleway", sans-serif; */
   margin-bottom: 6rem;
 }
 .projects-parent {
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 20px;
@@ -358,16 +382,6 @@ font-family: "Raleway", sans-serif; */
   display: flex;
   flex-direction: column;
 }
-
-/* .project-holder span {
-  height: auto;
-  margin-bottom: 10px;
-  transition: transform 0.5s ease-in-out;
-}
-
-.project-holder span:hover {
-  transform: scale(0.9);
-} */
 
 .project-image-holder {
   height: auto;
@@ -432,8 +446,9 @@ font-family: "Raleway", sans-serif; */
 }
 
 /* CONTACT SECTION--- */
+
 .contact-main-container {
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .contact-main-container h2 {
@@ -533,8 +548,9 @@ font-family: "Raleway", sans-serif; */
 }
 
 /* LICENSING SECTION--- */
+
 .licensing-mainContainer {
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .licensing-mainContainer h2 {
@@ -566,6 +582,7 @@ font-family: "Raleway", sans-serif; */
 }
 
 /* ERROR PAGE SECTION -- */
+
 .error-page-main {
   font-family: "Raleway", sans-serif;
   background-color: #050505;

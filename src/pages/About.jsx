@@ -72,9 +72,9 @@ function About() {
           <p>Lagos, Nigeria</p>
         </span>
 
-        <hr className="pagebreak" />
+        {/* <hr className="pagebreak" /> */}
 
-        <section className="aboutpage-detailParent">
+        {/* <section className="aboutpage-detailParent">
           <h3>Experience</h3>
 
           <div id="aboutpage-detailHolder">
@@ -87,7 +87,7 @@ function About() {
               <PiDotBold /> Contract, Feb 2023 - Oct 2023
             </p>
           </div>
-        </section>
+        </section> */}
 
         <hr className="pagebreak" />
 

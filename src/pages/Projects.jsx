@@ -4,6 +4,14 @@ import { SiGithub } from "react-icons/si";
 
 export const projectItems = [
   {
+    image: "/images/EchoChatImg.png",
+    projectType: "MODERN WEB CHAT APP WITH REAL-TIME COMMUNICATION",
+    title: "EchoChat",
+    url: "https://echochat-pi.vercel.app",
+    stack: "MERN",
+    githubURL: "https://https://github.com/earlmorningstar/echo-chat",
+  },
+  {
     image: "/images/trendVault-1.png",
     projectType: "E-COMMERCE WEB APPLICATION",
     title: "Trend Vault",

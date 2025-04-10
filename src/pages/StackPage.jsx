@@ -17,7 +17,7 @@ export const techItems = [
   },
   {
     image: "/images/typescript.jpg",
-    title: "typescript",
+    title: "TypeScript",
     subtitle: "Programming Language",
     description:
       "TypeScript is a programming language that enhances JavaScript by introducing optional static types, improving code quality and maintainability.",
