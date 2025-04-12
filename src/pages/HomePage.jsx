@@ -34,33 +34,33 @@ function HomePage() {
         </div> */}
 
         <span>
-          <h3>Recent Deployment</h3>
+          <h3>Notable Projects</h3>
         </span>
 
         <div className="projects-parent">
           {projectItems.slice(0, 3).map((item, index) => (
-            <a 
-            href={item.url}
-            target="_blank" 
-                rel="noopener noreferrer" 
-                key={index} 
-                className="project-holder-link"
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={index}
+              className="project-holder-link"
             >
-            <div className="project-holder">
-              <span>
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="project-image"
-                />
-              </span>
-              <div className="project-info-parent">
-                <h4>
-                  {item.projectType} <IoMdArrowForward size={25} />
-                </h4>
-                <h3>{item.title}</h3>
+              <div className="project-holder">
+                <aside className="project-image-holder">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="project-image"
+                  />
+                </aside>
+                <div className="project-info-parent">
+                  <h4>
+                    {item.projectType} <IoMdArrowForward size={25} />
+                  </h4>
+                  <h3>{item.title}</h3>
+                </div>
               </div>
-            </div>
             </a>
           ))}
         </div>

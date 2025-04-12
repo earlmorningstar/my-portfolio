@@ -10,6 +10,8 @@ export const projectItems = [
     url: "https://echochat-pi.vercel.app",
     stack: "MERN",
     githubURL: "https://https://github.com/earlmorningstar/echo-chat",
+    paragraph:
+      "Built a real-time web chat application designed for seamless communication, integrating features like instant messaging, voice & video calling, and live call status updates. Leveraging React (TypeScript) for the frontend, Node.js & Express for the backend, MongoDB, and Twilio Voice and Video SDKs to enable seamless one-on-one calling within the chat application. The app supports dynamic call handling (accept, reject, end), call history tracking, and real-time presence updates. The UI also includes custom theming, animations, responsive interface design and interactive grid effects to elevate user experience.",
   },
   {
     image: "/images/trendVault-1.png",
@@ -18,6 +20,8 @@ export const projectItems = [
     url: "https://codsoft-trendvault.vercel.app",
     stack: "MERN",
     githubURL: "https://github.com/earlmorningstar/CODSOFT",
+    paragraph:
+      "A full-featured e-commerce platform built with React for frontend, Node.js & Express for backend, and MongoDB. TrendVault offers a seamless shopping experience with secure Stripe payment integration, real-time cart updates via WebSockets, product synchronization with Shopify, and advanced user account management. The app supports authentication, wishlist, notifications, and order tracking, all managed through a modular React Context system. Designed with scalability, security, and performance in mind, TrendVault demonstrates expertise in full-stack development, responsive interface design and third-party service integration.",
   },
   {
     image: "/images/projectMgtToolImg.png",
@@ -26,6 +30,8 @@ export const projectItems = [
     url: "https://codsoft-projectmgtapp.vercel.app/",
     stack: "MERN",
     githubURL: "https://github.com/earlmorningstar/CODSOFT",
+    paragraph:
+      "Build this full-stack Project Management App, and it offers a streamlined way for users to manage multiple projects and tasks with precision. Users can create, edit, and delete projects, assign tasks with deadlines, and track task progress through customizable status indicators like (Pending, In-Progress, and Completed). A personal profile dashboard also allows for account management. Built with React, Node.js, Express, and MongoDB, the app demonstrates efficient CRUD operations, structured data handling, and responsive UI design",
   },
   {
     image: "/images/graceGuide-img.png",
@@ -34,6 +40,8 @@ export const projectItems = [
     url: "https://graceguide.vercel.app/",
     stack: "React",
     githubURL: "https://github.com/earlmorningstar/graceguide",
+    paragraph:
+      "Grace Guide is a Bible web application built with React that offers users a structured and uplifting devotional experience. The app features a Verse of the Day (VOTD) tab that displays the current and previous day's verses, including chapter reference and Bible version. Users can explore scripture through the Bible tab by selecting a version, book, chapter, and verse, with intuitive navigation for next/previous passages. A Read Full Chapter tab allows for seamless reading of entire chapters, while the Daily Prayer tab offers a curated devotional verse paired with a unique prayer. Bible content and verses are dynamically fetched from an external API, while daily prayers are preloaded within the app, ensuring both real-time access and personalized devotion.",
   },
   {
     image: "/images/espresso-two-img.png",
@@ -116,6 +124,7 @@ function Projects() {
                   >
                     <SiGithub size={18} /> {item.githubURL}
                   </a>
+                  <h4>{item.paragraph}</h4>
                   <h5>Stack: {item.stack}</h5>
                 </div>
               </div>
