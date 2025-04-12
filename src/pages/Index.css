@@ -124,7 +124,7 @@ font-family: "Raleway", sans-serif; */
   bottom: 10px;
   left: 6px;
   right: 6px;
-  color: white;
+  color: #ffffff;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   font-size: 16px;
@@ -135,6 +135,10 @@ font-family: "Raleway", sans-serif; */
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+#homepage-proj-type {
+  color: #4de6a6;
 }
 
 /* BLOGPAGE SECTION--- */
@@ -418,7 +422,7 @@ font-family: "Raleway", sans-serif; */
   color: #4de6a6;
   font-size: 12px;
   font-weight: 300;
-  margin: 10px  0;
+  margin: 10px 0;
 }
 
 .project-info-parent h4 {
@@ -659,7 +663,6 @@ font-family: "Raleway", sans-serif; */
   }
   .project-holder aside {
     width: 100%;
-   
   }
 
   .project-image {

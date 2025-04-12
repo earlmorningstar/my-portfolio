@@ -55,7 +55,7 @@ function HomePage() {
                   />
                 </aside>
                 <div className="project-info-parent">
-                  <h4>
+                  <h4 id="homepage-proj-type">
                     {item.projectType} <IoMdArrowForward size={25} />
                   </h4>
                   <h3>{item.title}</h3>

@@ -50,6 +50,8 @@ export const projectItems = [
     url: "https://espressoamore.vercel.app/",
     stack: "React",
     githubURL: "https://github.com/earlmorningstar/espressoamore",
+    paragraph:
+      "Empresso Amore is a React-based e-commerce web application centered around a coffee shopping experience. Users can create accounts, browse the coffee menu, add items to their cart or favorites, and proceed through checkout. The app includes a user profile section displaying personal details and account management options. Built as a practice project, it demonstrates effective use of Context API for global state management, local storage for persistence, and robust API integration with error handling to simulate a full-featured shopping workflow.",
   },
   {
     image: "/images/port-img.png",
@@ -58,6 +60,8 @@ export const projectItems = [
     url: "https://my-portfolio-three-blue-58.vercel.app",
     stack: "React",
     githubURL: "https://github.com/earlmorningstar/my-portfolio",
+    paragraph:
+      "My Developer Portfolio is a clean, responsive web application built with React to showcase my work, skills, and background. It features dedicated tabs for an introduction about me, my tech stack, selected projects, and contact information. The contact section integrates EmailJS, allowing visitors to reach out directly via email through the site, alongside links to my social profiles. It also includes a licensing section for transparency regarding project usage. Designed with simplicity and clarity in mind, it serves as a central hub for presenting my development journey.",
   },
   {
     image: "/images/chronicleHub.png",
@@ -66,6 +70,8 @@ export const projectItems = [
     url: "https://github.com/earlmorningstar/chroniclehub",
     stack: "React",
     githubURL: "https://github.com/earlmorningstar/chroniclehub",
+    paragraph:
+      "ChronicleHub is a dynamic blog-style web application that fetches real-time news from multiple external APIs, offering users a variety of stories across different categories. Built with React and Context API for efficient state management, it displays article titles, descriptions, authors, publish dates, thumbnails, and direct links to full content (due to API constraints). It includes features like automatic content refresh, error handling, and responsive design, serving as a practical showcase of API integration, state handling, and adaptive UI development.",
   },
   {
     image: "/images/kubeInsight-img.png",
@@ -74,15 +80,17 @@ export const projectItems = [
     url: "https://kubeinsights.vercel.app/",
     stack: "React",
     githubURL: "https://github.com/earlmorningstar/kubeInsights",
+    paragraph:
+      "KubeInsights is a responsive, multi-page landing web application focused on clean UI, smooth navigation, and user experience. It showcases effective use of React fundamentals including code splitting, form validation, and modular styling—all without external APIs or complex state management. The project emphasizes structured layouts, intuitive design, and performance-focused implementation.",
   },
-  {
-    image: "/images/interity-img22.png",
-    projectType: "WEB APPLICATION",
-    title: "Interity",
-    url: "https://interity-six.vercel.app",
-    stack: "React",
-    githubURL: "https://github.com/earlmorningstar/Interity",
-  },
+  // {
+  //   image: "/images/interity-img22.png",
+  //   projectType: "WEB APPLICATION",
+  //   title: "Interity",
+  //   url: "https://interity-six.vercel.app",
+  //   stack: "React",
+  //   githubURL: "https://github.com/earlmorningstar/Interity",
+  // },
 ];
 
 function Projects() {
