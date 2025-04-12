@@ -1,12 +1,10 @@
-import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { GoDotFill } from "react-icons/go";
-import { MdHomeFilled } from "react-icons/md";
+import { MdHomeFilled, MdOutlineMail } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { SiDatabricks } from "react-icons/si";
-import { PiWallLight } from "react-icons/pi";
-import { MdOutlineMail } from "react-icons/md";
-import { PiCopyrightLight } from "react-icons/pi";
+import { PiWallLight, PiCopyrightLight } from "react-icons/pi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RiCloseLargeFill } from "react-icons/ri";
 import "./MainNavigation.css";
