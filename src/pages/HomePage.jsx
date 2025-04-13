@@ -78,9 +78,10 @@ function HomePage() {
         <span id="hp-mainContainer-span-id">
           <h3>Hey, I'm Joel,</h3>
           <h4>
-            I'm a frontend web developer and writer passionate about technology,
-            creativity, and building meaningful connections through code and
-            words.
+            I'm a frontend web developer passionate about building intuitive,
+            real-world solutions. I’ve explored backend development out of
+            curiosity and to bring my personal projects to life. Always
+            learning, always creating.
           </h4>
         </span>
         {/* <span>
