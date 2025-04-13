@@ -7,10 +7,10 @@ const Fallback = () => (
       justifyContent: "center",
       alignItems: "center",
       height: "100vh",
-      bgcolor: "#000000"
+      bgcolor: "#000000",
     }}
   >
-    <CircularProgress />
+    <CircularProgress color="#4de6a6" />
   </Box>
 );
 

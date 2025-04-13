@@ -1,25 +1,26 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
-import { Alert, Stack } from "@mui/material";
-import { AiFillMail } from "react-icons/ai";
+import { Alert, CircularProgress, Snackbar } from "@mui/material";
+import { AiFillMail, AiFillLinkedin } from "react-icons/ai";
 import { MdLocalPhone } from "react-icons/md";
 import { IoLogoInstagram } from "react-icons/io";
 import { FaXTwitter } from "react-icons/fa6";
-import { SiGithub } from "react-icons/si";
-import { AiFillLinkedin } from "react-icons/ai";
-import { SiSubstack } from "react-icons/si";
+import { SiGithub, SiSubstack } from "react-icons/si";
 
-function Contact() {
+const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const [feedback, setFeedback] = useState("");
+  const [snackbar, setSnackbar] = useState({
+    open: false,
+    type: "",
+    message: "",
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    setFeedback({ type: "", message: "" });
 
     const templateParams = {
       name: name,
@@ -41,7 +42,8 @@ function Contact() {
             response.status,
             response.text
           );
-          setFeedback({
+          setSnackbar({
+            open: true,
             type: "success",
             message: "Your message has been sent successfully!",
           });
@@ -51,18 +53,23 @@ function Contact() {
         },
         (error) => {
           console.error("Error sending email:", error);
-          setFeedback({
+          setSnackbar({
+            open: true,
             type: "error",
-            message: "Failed to your message. Please try again.",
+            message: "Failed to send your message. Please try again.",
           });
         }
       )
       .finally(() => {
         setLoading(false);
-        setTimeout(() => {
-          setFeedback({ type: "", message: "" });
-        }, 4000);
       });
+  };
+
+  const handleCloseSnackbar = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setSnackbar({ ...snackbar, open: false });
   };
 
   return (
@@ -236,20 +243,31 @@ function Contact() {
               ></textarea>
             </div>
             <button type="submit" disabled={loading}>
-              {loading ? "Sending..." : "Send"}
+              {loading ? (
+                <CircularProgress size={12} sx={{ color: "#000000" }} />
+              ) : (
+                "Send"
+              )}
             </button>
-            {feedback.type && (
-              <Stack>
-                <Alert className="alert-ui" severity={feedback.type}>
-                  {feedback.message}
-                </Alert>
-              </Stack>
-            )}
           </form>
         </div>
       </div>
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={4000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity={snackbar.type}
+          sx={{ width: "100%" }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </div>
   );
-}
+};
 
 export default Contact;

@@ -30,6 +30,13 @@ export const techItems = [
       "Node.js is a JavaScript runtime built on Chrome's V8 engine, allowing developers to run JavaScript on the server-side for building scalable and high-performance applications.",
   },
   {
+    image: "/images/express-9d.png",
+    title: "Express.js",
+    subtitle: "Web Framework",
+    description:
+      "Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for building web applications and APIs.",
+  },
+  {
     image: "/images/mongodb.png",
     title: "MongoDB",
     subtitle: "Database",

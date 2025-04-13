@@ -95,30 +95,34 @@ function HomePage() {
 
         <div className="homepage-nav-btn">
           <h3>Notable Projects</h3>
-          <button onClick={handleProfilePage}>View Projects</button>
+          <button onClick={handleProfilePage}>View All Projects</button>
         </div>
 
         <div className="projects-parent">
           {projectItems.slice(0, 3).map((item, index) => (
-            <a
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              key={index}
-              className="project-holder-link"
-            >
-              <div className="project-holder">
-                <aside className="project-image-holder">
-                  {renderProjectImage(item)}
-                </aside>
-                <div className="project-info-parent">
-                  <h4 id="homepage-proj-type">
-                    {item.projectType} <IoMdArrowForward size={25} />
-                  </h4>
-                  <h3>{item.title}</h3>
-                </div>
+            <>
+              <div className="project-info-parent">
+                <h3>{item.title}</h3>
               </div>
-            </a>
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={index}
+                className="project-holder-link"
+              >
+                <div className="project-holder">
+                  <aside className="project-image-holder">
+                    {renderProjectImage(item)}
+                  </aside>
+                  <div className="project-info-parent">
+                    <h4 id="homepage-proj-type">
+                      {item.projectType} <IoMdArrowForward size={25} />
+                    </h4>
+                  </div>
+                </div>
+              </a>
+            </>
           ))}
         </div>
 
