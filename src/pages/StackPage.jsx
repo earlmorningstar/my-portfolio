@@ -52,12 +52,18 @@ export const techItems = [
   },
 ];
 
-function StackPage() {
+const StackPage = () => {
   return (
     <>
       <div className="stackpage-main-container">
-        <h3>My Tech Kit</h3>
-        <div className="tech-kit-Parent">
+        <h3 data-aos="fade-up" data-aos-delay="100">
+          My Tech Kit
+        </h3>
+        <div
+          className="tech-kit-Parent"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           {techItems.map((item, index) => (
             <div className="each-tech-kit" key={index}>
               <span>
@@ -82,6 +88,6 @@ function StackPage() {
       <ConnectionNote />
     </>
   );
-}
+};
 
 export default StackPage;

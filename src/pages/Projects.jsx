@@ -63,7 +63,7 @@ export const projectItems = [
       { img: "/images/stripe-9d.jpg", name: "Stripe" },
       { img: "/images/nodemailer-9d.png", name: "Node Mailer" },
       { img: "/images/materialUI-9d.png", name: "Material UI" },
-         ],
+    ],
     githubURL: "https://github.com/earlmorningstar/CODSOFT",
     paragraph:
       "A full-featured e-commerce platform built with React for frontend, Node.js & Express for backend, and MongoDB. TrendVault offers a seamless shopping experience with secure Stripe payment integration, real-time cart updates via WebSockets, product synchronization with Shopify, and advanced user account management. The app supports authentication, wishlist, notifications, and order tracking, all managed through a modular React Context system. Designed with scalability, security, and performance in mind, TrendVault demonstrates expertise in full-stack development, responsive interface design and third-party service integration.",
@@ -153,7 +153,7 @@ export const projectItems = [
   },
 ];
 
-function Projects() {
+const Projects = () => {
   const [slidersInitialized, setSlidersInitialized] = useState(false);
 
   useEffect(() => {
@@ -183,7 +183,7 @@ function Projects() {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 3000,
       arrows: false,
       pauseOnHover: true,
     };
@@ -208,9 +208,15 @@ function Projects() {
   return (
     <>
       <div className="projects-main-container">
-        <h2>Deployments</h2>
+        <h2 data-aos="fade-up" data-aos-delay="100">
+          Deployments
+        </h2>
 
-        <div className="projects-parent">
+        <div
+          className="projects-parent"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           {projectItems.map((item, index) => (
             <div key={index}>
               <div className="project-info-parent">
@@ -255,7 +261,6 @@ function Projects() {
                       ))}
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -265,6 +270,6 @@ function Projects() {
       <ConnectionNote />
     </>
   );
-}
+};
 
 export default Projects;

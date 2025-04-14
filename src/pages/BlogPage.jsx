@@ -2,7 +2,7 @@ import ConnectionNote from "./ConnectionNote";
 import DispatchItem from "./DispatchItem";
 import "./Index.css";
 
-function BlogPage() {
+const BlogPage = () => {
   const dispatchItems = Array(12).fill({
     image: "/images/silhouette.jfif",
     text: "This is an inspirational quote for you to improve yourself and get better. Fight until the end.",
@@ -21,6 +21,6 @@ function BlogPage() {
       <ConnectionNote />
     </>
   );
-}
+};
 
 export default BlogPage;

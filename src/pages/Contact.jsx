@@ -74,10 +74,10 @@ const Contact = () => {
 
   return (
     <div className="contact-main-container">
-      <h2>Forge a Connection</h2>
+      <h2 data-aos="fade-up" data-aos-delay="100">Forge a Connection</h2>
 
       <div className="contactInfo-flex">
-        <div className="contactLinks-parent">
+        <div className="contactLinks-parent" data-aos="fade-up" data-aos-delay="200">
           <h4 className="contact-header">Contact</h4>
           <p id="contact-fsz-id">
             <a
@@ -206,7 +206,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="form-container">
+        <div className="form-container" data-aos="fade-up" data-aos-delay="300">
           <h4 className="contact-header"> Send Me A Message</h4>
           <form className="form-holder" onSubmit={handleSubmit}>
             <div className="name-email-flexHolder">

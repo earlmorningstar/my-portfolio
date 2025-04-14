@@ -3,7 +3,7 @@ import MainNavigation from "../components/MainNavigation";
 import ScrollToTop from "../components/ScrollToTop";
 import "./Index.css";
 
-function RootLayout() {
+const RootLayout = () => {
   return (
     <div className="root-layout-container">
       <ScrollToTop />
@@ -15,6 +15,6 @@ function RootLayout() {
       </main>
     </div>
   );
-}
+};
 
 export default RootLayout;

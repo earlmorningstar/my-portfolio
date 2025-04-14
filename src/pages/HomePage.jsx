@@ -9,8 +9,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Index.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-function HomePage() {
+const HomePage = () => {
   const [slidersInitialized, setSlidersInitialized] = useState(false);
   const navigate = useNavigate();
   // const dispatchItems = Array(12).fill({
@@ -19,11 +21,29 @@ function HomePage() {
   // });
 
   useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+    });
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        AOS.refreshHard();
+        setSlidersInitialized(true);
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
     const timer = setTimeout(() => {
       setSlidersInitialized(true);
     }, 400);
 
-    return () => clearTimeout(timer);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      clearTimeout(timer);
+    };
   }, []);
 
   const renderProjectImage = (item) => {
@@ -46,7 +66,7 @@ function HomePage() {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 3000,
       arrows: false,
       pauseOnHover: true,
     };
@@ -75,7 +95,11 @@ function HomePage() {
   return (
     <>
       <div className="homepage-main-container">
-        <span id="hp-mainContainer-span-id">
+        <span
+          id="hp-mainContainer-span-id"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <h3>Hey, I'm Joel,</h3>
           <h4>
             I'm a frontend web developer passionate about building intuitive,
@@ -94,12 +118,20 @@ function HomePage() {
           ))}
         </div> */}
 
-        <div className="homepage-nav-btn">
+        <div
+          className="homepage-nav-btn"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <h3>Notable Projects</h3>
           <button onClick={handleProfilePage}>View All Projects</button>
         </div>
 
-        <div className="projects-parent">
+        <div
+          className="projects-parent"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           {projectItems.slice(0, 3).map((item, index) => (
             <>
               <div className="project-info-parent">
@@ -154,6 +186,6 @@ function HomePage() {
       <ConnectionNote />
     </>
   );
-}
+};
 
 export default HomePage;

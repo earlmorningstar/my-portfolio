@@ -1,23 +1,23 @@
-import { IoLocationSharp } from "react-icons/io5";
-// import { PiDesktopTowerFill } from "react-icons/pi";
-import { MdCastForEducation } from "react-icons/md";
 import ConnectionNote from "./ConnectionNote";
-// import { PiDotBold } from "react-icons/pi";
+import { IoLocationSharp } from "react-icons/io5";
+import { MdCastForEducation } from "react-icons/md";
 
-function About() {
+const About = () => {
   return (
     <>
       <div className="aboutpage-main-container">
         <span className="aboutpage-headers-holder">
           <h4>Service Overview</h4>
-          <h2>Joel Onyeabor???</h2>
-          <h5>
+          <h2 data-aos="fade-up" data-aos-delay="100">
+            Joel Onyeabor???
+          </h2>
+          <h5 data-aos="fade-up" data-aos-delay="200">
             Just an enthusiastic developer passionate about coding,
             problem-solving, the mind, and fitness.
           </h5>
         </span>
 
-        <div className="aboutpage-note">
+        <div className="aboutpage-note" data-aos="fade-up" data-aos-delay="300">
           {" "}
           <p>
             {" "}
@@ -134,6 +134,6 @@ function About() {
       <ConnectionNote />
     </>
   );
-}
+};
 
 export default About;
