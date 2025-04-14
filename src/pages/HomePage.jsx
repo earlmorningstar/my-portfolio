@@ -89,7 +89,7 @@ const HomePage = () => {
             learning, always creating.
           </h4>
         </span>
-       <div
+        <div
           className="homepage-nav-btn"
           data-aos={shouldAnimate ? "fade-up" : ""}
           data-aos-delay="200"

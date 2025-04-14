@@ -9,6 +9,13 @@ import { FaXTwitter } from "react-icons/fa6";
 import { SiGithub, SiSubstack } from "react-icons/si";
 
 const Contact = () => {
+  const contactEmail = process.env.REACT_APP_CONTACT_EMAIL;
+  const whatsappNumber = process.env.REACT_APP_WHATSAPP_NUMBER;
+  const twitterUrl = process.env.REACT_APP_TWITTER_URL;
+  const instagramUrl = process.env.REACT_APP_INSTAGRAM_URL;
+  const githubUrl = process.env.REACT_APP_GITHUB_URL;
+  const linkedinUrl = process.env.REACT_APP_LINKEDIN_URL;
+  const substackUrl = process.env.REACT_APP_SUBSTACK_URL;
   const aos = useAOS();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -96,7 +103,7 @@ const Contact = () => {
           <h4 className="contact-header">Contact</h4>
           <p id="contact-fsz-id">
             <a
-              href="mailto:sayhitojoelinton@gmail.com"
+              href={`mailto:${contactEmail}`}
               style={{
                 color: "#999999",
                 textDecoration: "none",
@@ -105,14 +112,12 @@ const Contact = () => {
               }}
             >
               <AiFillMail size={15} color="#999999" />{" "}
-              <span style={{ marginLeft: "0.5rem" }}>
-                sayhitojoelinton@gmail.com
-              </span>
+              <span style={{ marginLeft: "0.5rem" }}>{contactEmail}</span>
             </a>
           </p>
           <p id="contact-fsz-id">
             <a
-              href="https://wa.me/2349035736627"
+              href={`https://wa.me/${whatsappNumber}`}
               style={{
                 color: "#999999",
                 textDecoration: "none",
@@ -121,13 +126,13 @@ const Contact = () => {
               }}
             >
               <MdLocalPhone size={15} color="#999999" />{" "}
-              <span style={{ marginLeft: "0.5rem" }}>+234 903 573 6627</span>
+              <span style={{ marginLeft: "0.5rem" }}>+{whatsappNumber}</span>
             </a>
           </p>
           <h4 className="contact-header">My Online Presence</h4>
           <p>
             <a
-              href="https://twitter.com/earlmorningsta1"
+              href={twitterUrl}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -143,7 +148,7 @@ const Contact = () => {
           </p>
           <p>
             <a
-              href="https://instagram.com/earlmorningstar"
+              href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -159,7 +164,7 @@ const Contact = () => {
           </p>
           <p>
             <a
-              href="https://github.com/earlmorningstar"
+              href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -175,7 +180,7 @@ const Contact = () => {
           </p>
           <p>
             <a
-              href="https://linkedin.com/in/joel-onyeabor"
+              href={linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -191,7 +196,7 @@ const Contact = () => {
           </p>
           <p>
             <a
-              href="https://earlmorningstar.substack.com"
+              href={substackUrl}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -207,7 +212,7 @@ const Contact = () => {
           </p>
           <p>
             <a
-              href="mailto:sayhitojoelinton@gmail.com"
+              href={`mailto:${contactEmail}`}
               style={{
                 color: "#999999",
                 textDecoration: "none",
@@ -221,7 +226,11 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="form-container" data-aos={shouldAnimate ? "fade-up" : ""} data-aos-delay="300">
+        <div
+          className="form-container"
+          data-aos={shouldAnimate ? "fade-up" : ""}
+          data-aos-delay="300"
+        >
           <h4 className="contact-header"> Send Me A Message</h4>
           <form className="form-holder" onSubmit={handleSubmit}>
             <div className="name-email-flexHolder">
