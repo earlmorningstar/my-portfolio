@@ -4,47 +4,29 @@ import { projectItems } from "./Projects";
 import { IoMdArrowForward } from "react-icons/io";
 import { techItems } from "./StackPage";
 import ConnectionNote from "./ConnectionNote";
-// import DispatchItem from "./DispatchItem";
+import { useAOS } from "../context/AOSContext";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Index.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const HomePage = () => {
   const [slidersInitialized, setSlidersInitialized] = useState(false);
+  const [shouldAnimate, setShouldAnimate] = useState(true);
   const navigate = useNavigate();
-  // const dispatchItems = Array(12).fill({
-  //   image: "/images/silhouette.jfif",
-  //   text: "This is an inspirational quote for you to improve yourself and get better. Fight until the end.",
-  // });
+  const aos = useAOS();
+  const componentId = "home-page";
 
   useEffect(() => {
-    AOS.init({
-      duration: 800,
-      easing: "ease-in-out",
-      once: true,
-    });
-
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === "visible") {
-        AOS.refreshHard();
-        setSlidersInitialized(true);
-      }
-    };
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
+    const canAnimate = aos.refreshComponent(componentId);
+    setShouldAnimate(canAnimate);
 
     const timer = setTimeout(() => {
       setSlidersInitialized(true);
     }, 400);
 
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-      clearTimeout(timer);
-    };
-  }, []);
+    return () => clearTimeout(timer);
+  }, [aos, componentId]);
 
   const renderProjectImage = (item) => {
     if (item.images.length === 1) {
@@ -97,7 +79,7 @@ const HomePage = () => {
       <div className="homepage-main-container">
         <span
           id="hp-mainContainer-span-id"
-          data-aos="fade-up"
+          data-aos={shouldAnimate ? "fade-up" : ""}
           data-aos-delay="100"
         >
           <h3>Hey, I'm Joel,</h3>
@@ -108,19 +90,9 @@ const HomePage = () => {
             learning, always creating.
           </h4>
         </span>
-        {/* <span>
-          <h3>Recent Dispatch</h3>
-        </span> */}
-
-        {/* <div className="latest-dispatch-container">
-          {dispatchItems.slice(0, 3).map((item, index) => (
-            <DispatchItem key={index} image={item.image} text={item.text} />
-          ))}
-        </div> */}
-
-        <div
+       <div
           className="homepage-nav-btn"
-          data-aos="fade-up"
+          data-aos={shouldAnimate ? "fade-up" : ""}
           data-aos-delay="200"
         >
           <h3>Notable Projects</h3>
@@ -129,7 +101,7 @@ const HomePage = () => {
 
         <div
           className="projects-parent"
-          data-aos="fade-up"
+          data-aos={shouldAnimate ? "fade-up" : ""}
           data-aos-delay="300"
         >
           {projectItems.slice(0, 3).map((item, index) => (

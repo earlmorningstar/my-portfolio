@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import ConnectionNote from "./ConnectionNote";
+import { useAOS } from "../context/AOSContext";
 
 export const techItems = [
   {
@@ -53,15 +55,24 @@ export const techItems = [
 ];
 
 const StackPage = () => {
+  const aos = useAOS();
+  const [shouldAnimate, setShouldAnimate] = useState(true);
+  const componentId = "stack-page";
+
+  useEffect(() => {
+    const canAnimate = aos.refreshComponent(componentId);
+    setShouldAnimate(canAnimate);
+  }, [aos, componentId]);
+
   return (
     <>
       <div className="stackpage-main-container">
-        <h3 data-aos="fade-up" data-aos-delay="100">
+        <h3 data-aos={shouldAnimate ? "fade-up" : ""} data-aos-delay="100">
           My Tech Kit
         </h3>
         <div
           className="tech-kit-Parent"
-          data-aos="fade-up"
+          data-aos={shouldAnimate ? "fade-up" : ""}
           data-aos-delay="200"
         >
           {techItems.map((item, index) => (

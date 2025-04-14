@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
+import { useAOS } from "../context/AOSContext";
 import { Alert, CircularProgress, Snackbar } from "@mui/material";
 import { AiFillMail, AiFillLinkedin } from "react-icons/ai";
 import { MdLocalPhone } from "react-icons/md";
@@ -8,10 +9,13 @@ import { FaXTwitter } from "react-icons/fa6";
 import { SiGithub, SiSubstack } from "react-icons/si";
 
 const Contact = () => {
+  const aos = useAOS();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [shouldAnimate, setShouldAnimate] = useState(true);
+  const componentId = "stack-page";
   const [snackbar, setSnackbar] = useState({
     open: false,
     type: "",
@@ -72,12 +76,23 @@ const Contact = () => {
     setSnackbar({ ...snackbar, open: false });
   };
 
+  useEffect(() => {
+    const canAnimate = aos.refreshComponent(componentId);
+    setShouldAnimate(canAnimate);
+  }, [aos, componentId]);
+
   return (
     <div className="contact-main-container">
-      <h2 data-aos="fade-up" data-aos-delay="100">Forge a Connection</h2>
+      <h2 data-aos={shouldAnimate ? "fade-up" : ""} data-aos-delay="100">
+        Forge a Connection
+      </h2>
 
       <div className="contactInfo-flex">
-        <div className="contactLinks-parent" data-aos="fade-up" data-aos-delay="200">
+        <div
+          className="contactLinks-parent"
+          data-aos={shouldAnimate ? "fade-up" : ""}
+          data-aos-delay="200"
+        >
           <h4 className="contact-header">Contact</h4>
           <p id="contact-fsz-id">
             <a
@@ -206,7 +221,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="form-container" data-aos="fade-up" data-aos-delay="300">
+        <div className="form-container" data-aos={shouldAnimate ? "fade-up" : ""} data-aos-delay="300">
           <h4 className="contact-header"> Send Me A Message</h4>
           <form className="form-holder" onSubmit={handleSubmit}>
             <div className="name-email-flexHolder">

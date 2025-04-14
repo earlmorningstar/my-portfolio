@@ -1,7 +1,8 @@
+import { useEffect, useState } from "react";
 import ConnectionNote from "./ConnectionNote";
+import { useAOS } from "../context/AOSContext";
 import { IoMdArrowForward } from "react-icons/io";
 import { SiGithub } from "react-icons/si";
-import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -155,14 +156,21 @@ export const projectItems = [
 
 const Projects = () => {
   const [slidersInitialized, setSlidersInitialized] = useState(false);
+  const aos = useAOS();
+  const [shouldAnimate, setShouldAnimate] = useState(true);
+    const componentId = "stack-page";
 
   useEffect(() => {
+    const canAnimate = aos.refreshComponent(componentId);
+    setShouldAnimate(canAnimate);
+
     const timer = setTimeout(() => {
       setSlidersInitialized(true);
+      
     }, 400);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [aos, componentId]);
 
   const renderProjectImage = (item) => {
     if (item.images.length === 1) {
@@ -208,13 +216,13 @@ const Projects = () => {
   return (
     <>
       <div className="projects-main-container">
-        <h2 data-aos="fade-up" data-aos-delay="100">
+        <h2 data-aos={shouldAnimate ? "fade-up" : ""} data-aos-delay="100">
           Deployments
         </h2>
 
         <div
           className="projects-parent"
-          data-aos="fade-up"
+          data-aos={shouldAnimate ? "fade-up" : ""}
           data-aos-delay="200"
         >
           {projectItems.map((item, index) => (

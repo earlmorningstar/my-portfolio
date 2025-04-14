@@ -1,23 +1,38 @@
+import { useEffect, useState } from "react";
 import ConnectionNote from "./ConnectionNote";
+import { useAOS } from "../context/AOSContext";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdCastForEducation } from "react-icons/md";
 
 const About = () => {
+  const aos = useAOS();
+  const [shouldAnimate, setShouldAnimate] = useState(true);
+  const componentId = "stack-page";
+
+  useEffect(() => {
+    const canAnimate = aos.refreshComponent(componentId);
+    setShouldAnimate(canAnimate);
+  }, [aos, componentId]);
+
   return (
     <>
       <div className="aboutpage-main-container">
         <span className="aboutpage-headers-holder">
           <h4>Service Overview</h4>
-          <h2 data-aos="fade-up" data-aos-delay="100">
+          <h2 data-aos={shouldAnimate ? "fade-up" : ""} data-aos-delay="100">
             Joel Onyeabor???
           </h2>
-          <h5 data-aos="fade-up" data-aos-delay="200">
+          <h5 data-aos={shouldAnimate ? "fade-up" : ""} data-aos-delay="200">
             Just an enthusiastic developer passionate about coding,
             problem-solving, the mind, and fitness.
           </h5>
         </span>
 
-        <div className="aboutpage-note" data-aos="fade-up" data-aos-delay="300">
+        <div
+          className="aboutpage-note"
+          data-aos={shouldAnimate ? "fade-up" : ""}
+          data-aos-delay="300"
+        >
           {" "}
           <p>
             {" "}
