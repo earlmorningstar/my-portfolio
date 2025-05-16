@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_portfolio=self.webpackChunkmy_portfolio||[]).push([[6],{8006:(e,r,s)=>{s.r(r),s.d(r,{default:()=>a});var n=s(5475),o=(s(9826),s(579));const a=()=>(0,o.jsx)(o.Fragment,{children:(0,o.jsxs)("main",{className:"error-page-main",children:[(0,o.jsx)("h1",{children:"An error occured!!"}),(0,o.jsx)("p",{children:"Could not find this page."}),(0,o.jsx)(n.k2,{to:"/",children:(0,o.jsx)("button",{className:"errorPage-btn",children:"Home"})})]})})},9826:()=>{}}]);
+//# sourceMappingURL=6.7b21fcbd.chunk.js.map
