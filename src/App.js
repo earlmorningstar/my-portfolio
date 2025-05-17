@@ -11,22 +11,27 @@ const Projects = lazy(() => import("./pages/Projects"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Licensing = lazy(() => import("./pages/Licensing"));
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout />,
-    errorElement: <ErrorPage />,
-    children: [
-      { index: true, element: <HomePage /> },
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <RootLayout />,
+      errorElement: <ErrorPage />,
+      children: [
+        { index: true, element: <HomePage /> },
 
-      { path: "about", element: <About /> },
-      { path: "stack", element: <StackPage /> },
-      { path: "project", element: <Projects /> },
-      { path: "contact", element: <Contact /> },
-      { path: "licensing", element: <Licensing /> },
-    ],
-  },
-]);
+        { path: "about", element: <About /> },
+        { path: "stack", element: <StackPage /> },
+        { path: "project", element: <Projects /> },
+        { path: "contact", element: <Contact /> },
+        { path: "licensing", element: <Licensing /> },
+      ],
+    },
+  ],
+  {
+    basename: "/my-portfolio",
+  }
+);
 
 function App() {
   return (

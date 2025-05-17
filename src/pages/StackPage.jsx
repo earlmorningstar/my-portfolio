@@ -4,49 +4,49 @@ import { useAOS } from "../context/AOSContext";
 
 export const techItems = [
   {
-    image: "/images/react-img-removebg-preview.png",
+    image: "images/react-img-removebg-preview.png",
     title: "React",
     subtitle: "JavaScript Library",
     description:
       "React is a JavaScript library for building user interfaces, known for its component-based architecture and efficient state management, enabling fast, interactive, and scalable web applications..",
   },
   {
-    image: "/images/javascript.jpg",
+    image: "images/javascript.jpg",
     title: "JavaScript",
     subtitle: "Programming Language",
     description:
       "JavaScript is a high-level, interpreted language that supports event-driven, functional, and imperative programming styles.",
   },
   {
-    image: "/images/typescript.jpg",
+    image: "images/typescript.jpg",
     title: "TypeScript",
     subtitle: "Programming Language",
     description:
       "TypeScript is a programming language that enhances JavaScript by introducing optional static types, improving code quality and maintainability.",
   },
   {
-    image: "/images/nodejs.png",
+    image: "images/nodejs.png",
     title: "Node.js",
     subtitle: "JavaScript Runtime",
     description:
       "Node.js is a JavaScript runtime built on Chrome's V8 engine, allowing developers to run JavaScript on the server-side for building scalable and high-performance applications.",
   },
   {
-    image: "/images/express-9d.png",
+    image: "images/express-9d.png",
     title: "Express.js",
     subtitle: "Web Framework",
     description:
       "Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for building web applications and APIs.",
   },
   {
-    image: "/images/mongodb.png",
+    image: "images/mongodb.png",
     title: "MongoDB",
     subtitle: "Database",
     description:
       "MongoDB is a NoSQL database that stores data in flexible, JSON-like documents, making it easy to scale and handle large volumes of unstructured data.",
   },
   {
-    image: "/images/tailwind-removebg-preview.png",
+    image: "images/tailwind-removebg-preview.png",
     title: "Tailwind CSS",
     subtitle: "CSS Framework",
     description:
