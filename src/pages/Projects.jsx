@@ -123,7 +123,7 @@ export const projectItems = [
     images: ["images/port-img.png"],
     projectType: "WEB APPLICATION",
     title: "My Portfolio",
-    url: "https://my-portfolio-three-blue-58.vercel.app",
+    url: "https://earlmorningstar.github.io/my-portfolio",
     stack: [
       { img: "images/react-img-removebg-preview.png", name: "React" },
       { img: "images/materialUI-9d.png", name: "Material UI" },
@@ -158,7 +158,7 @@ const Projects = () => {
   const [slidersInitialized, setSlidersInitialized] = useState(false);
   const aos = useAOS();
   const [shouldAnimate, setShouldAnimate] = useState(true);
-    const componentId = "stack-page";
+  const componentId = "stack-page";
 
   useEffect(() => {
     const canAnimate = aos.refreshComponent(componentId);
@@ -166,7 +166,6 @@ const Projects = () => {
 
     const timer = setTimeout(() => {
       setSlidersInitialized(true);
-      
     }, 400);
 
     return () => clearTimeout(timer);
