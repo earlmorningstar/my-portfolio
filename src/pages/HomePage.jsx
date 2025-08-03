@@ -83,7 +83,7 @@ const HomePage = () => {
         >
           <h3>Hey, I'm Joel,</h3>
           <h4>
-            I'm a frontend web developer passionate about building intuitive,
+            ...a frontend web developer passionate about building intuitive,
             real-world solutions. I’ve explored backend development out of
             curiosity and to bring my personal projects to life. Always
             learning, always creating.
