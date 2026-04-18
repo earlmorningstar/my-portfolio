@@ -24,7 +24,7 @@ export const projectItems = [
     ],
     projectType: "MODERN WEB CHAT APP WITH REAL-TIME COMMUNICATION",
     title: "EchoChat",
-    url: "https://echochat-pi.vercel.app",
+    url: "https://echochat-livid.vercel.app",
     stack: [
       { img: "images/mongodb.png", name: "MongoDB" },
       { img: "images/express-9d.png", name: "Express.js" },

@@ -9,7 +9,7 @@ const ConnectionNote = () => {
     <div className="connectionNote-parent">
       <div onClick={handleConnectionPage}>Secure a Connection!</div>
       <p>
-        ©2025 Joelinton, Inc. (Earl Morningstar). All Rights Reserved.
+        ©2026 Joelinton, Inc. (Earl Morningstar). All Rights Reserved.
       </p>
     </div>
   );

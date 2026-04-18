@@ -1,154 +1,304 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
-/* font-family: "Montserrat", serif; */
-/* font-family: "Manrope", sans-serif; */
+/* ============================================
+   DESIGN TOKENS
+   ============================================ */
+:root {
+  --nav-bg: rgba(12, 16, 28, 0.75);
+  --nav-border: rgba(255, 255, 255, 0.07);
+  --glass-surface: rgba(255, 255, 255, 0.04);
+  --glass-surface-hover: rgba(255, 255, 255, 0.07);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --accent: #3ecf8e;
+  --accent-dim: rgba(62, 207, 142, 0.12);
+  --accent-glow: rgba(62, 207, 142, 0.25);
+  --text-primary: #e8eaf0;
+  --text-muted: #52586a;
+  --text-secondary: #9aa0b2;
+  --status-bg: rgba(62, 207, 142, 0.08);
+  --status-border: rgba(62, 207, 142, 0.2);
+  --dropdown-bg: rgba(8, 12, 22, 0.97);
+}
 
+/* ============================================
+   SIDEBAR NAV — DESKTOP
+   ============================================ */
 .main-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 28px 18px;
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-right: 1px solid var(--nav-border);
+  height: 100vh;
+  position: sticky;
+  top: 0;
 }
 
+/* ============================================
+   PROFILE SECTION
+   ============================================ */
 .profile-section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 190px;
-  text-align: center;
-  margin-bottom: 30px;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  margin-bottom: 36px;
+}
+
+.profile-image-wrapper {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  border-radius: 18px;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(62, 207, 142, 0.35),
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(62, 207, 142, 0.1)
+  );
 }
 
 .profile-image {
   width: 100%;
-  height: 25vh;
-  object-fit: contain;
-  border-radius: 7%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
 }
 
 .status {
   font-family: "Manrope", sans-serif;
-  display: flex;
+  font-weight: 500;
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 5px;
-  background-color: #062d1d;
-  color: #4de6a6;
-  padding: 4px 12px;
-  border-radius: 10px;
-  font-size: 14px;
+  gap: 6px;
+  background: var(--status-bg);
+  color: var(--accent);
+  padding: 5px 13px;
+  border-radius: 20px;
+  border: 1px solid var(--status-border);
+  white-space: nowrap;
 }
 
+.status svg {
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 4px var(--accent-glow));
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* ============================================
+   NAV LINKS
+   ============================================ */
 .nav-links-parent {
   font-family: "Montserrat", serif;
   display: flex;
   flex-direction: column;
   width: 100%;
+  gap: 2px;
 }
 
 .navlinks {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 11px;
   width: 100%;
-  padding: 0.75rem 1.25rem;
-  border-radius: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
   text-decoration: none;
-  color: #999999;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.navlinks svg {
+  flex-shrink: 0;
+  transition: color 0.2s ease;
 }
 
 .navlinks:hover {
-  color: #4de6a6;
+  color: var(--text-secondary);
+  background: var(--glass-surface);
 }
 
 .navlinks.active {
-  background-color: #1a1a1a;
-  color: #ffffff;
+  color: var(--text-primary);
+  background: var(--glass-surface-hover);
+  border-color: var(--glass-border);
 }
 
+.navlinks.active svg {
+  color: var(--accent);
+}
+
+/* Left accent bar on active link */
+.navlinks.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 2.5px;
+  border-radius: 0 2px 2px 0;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* ============================================
+   HAMBURGER — HIDDEN ON DESKTOP
+   ============================================ */
 .hamburger-menu {
   display: none;
   cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  background: var(--glass-surface);
+  border: 1px solid var(--glass-border);
+  transition: background 0.2s ease;
+}
+
+.hamburger-menu:hover {
+  background: var(--glass-surface-hover);
+}
+
+/* ============================================
+   MOBILE DROPDOWN OVERLAY
+   ============================================ */
+.dropdown-nav-links-parent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  animation: slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.dropdown-nav-links-parent.closing {
+  animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .nav-link-dropDown {
   font-family: "Montserrat", serif;
   display: flex;
-  align-items: start;
-  gap: 30px;
   flex-direction: column;
-  background-color: #050505;
-  padding: 40px 32px;
+  gap: 4px;
+  background: #080c14;
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  padding: 100px 28px 40px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  border-top: 1px solid var(--nav-border);
 }
 
-.dropdown-nav-links-parent {
-  position: fixed;
-  top: 120px;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  animation: slideInFromTop 0.5s ease-in-out;
-  height: 100vh;
-  max-height: calc(100vh - 60px);
+/* Links in dropdown are slightly larger */
+.nav-link-dropDown .navlinks {
+  font-size: 15px;
+  padding: 13px 16px;
 }
 
-@keyframes slideInFromTop {
+@keyframes fadeSlideIn {
   from {
-    transform: translateY(-100%);
     opacity: 0;
+    transform: translateY(-12px);
   }
   to {
-    transform: translateX(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
-@keyframes slideToRight {
+
+@keyframes slideDown {
   from {
-    transform: translateX(0);
-    opacity: 1;
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-    transform: translateX(100%);
-    opacity: 0;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Media queries */
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
 
+/* ============================================
+   MEDIA QUERIES
+   ============================================ */
 @media screen and (max-width: 1150px) {
   .hamburger-menu {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   #main-nav-id {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-  }
-
-  #status-id {
-    height: 30px;
-    width: auto;
+    height: auto;
+    padding: 14px 20px;
+    border-right: none;
+    border-bottom: 1px solid var(--nav-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
 
   .profile-section {
     flex-direction: row;
     align-items: center;
-    width: auto;
+    gap: 14px;
     margin-bottom: 0;
+    width: auto;
+  }
+
+  .profile-image-wrapper {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
   }
 
   .profile-image {
-    width: 70px;
-    height: 70px;
+    border-radius: 10px;
   }
 
   .status {
-    padding: 4px 17px;
+    font-size: 11px;
+    padding: 4px 11px;
   }
 
   .nav-links-parent {
@@ -156,6 +306,6 @@
   }
 
   .dropdown-nav-links-parent {
-    animation: slideInFromTop 0.7s ease-in-out;
+    top: 93px;
   }
 }

@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# Joel Onyeabor — Frontend Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A personal portfolio built with React, showcasing projects, technical stack, and a way to get in touch. Designed with a glassmorphic aesthetic — restrained, matured, and built to feel at home alongside modern developer tools like Linear, Vercel, and Stripe.
 
-## Available Scripts
+**Live site:** [earlmorningstar.github.io/my-portfolio](https://earlmorningstar.github.io/my-portfolio/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Home** — Introduction, notable projects, and a snapshot of the tech stack
+- **About** — Background, philosophy, education, and experience
+- **Stack** — Technologies and tools used professionally
+- **Projects** — Full project showcase with descriptions, stack tags, and links
+- **Contact** — Reach out via the contact form or social links
+- **Licensing** — Licensing information for portfolio content
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Layer         | Technology                              |
+| ------------- | --------------------------------------- |
+| Framework     | React 18                                |
+| Routing       | React Router v6 (`createBrowserRouter`) |
+| UI Components | MUI (Material UI)                       |
+| Icons         | React Icons                             |
+| Animations    | AOS (Animate On Scroll)                 |
+| Carousel      | React Slick                             |
+| Email         | EmailJS                                 |
+| Deployment    | GitHub Pages via `gh-pages`             |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Local Development
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Clone the repository
+git clone https://github.com/earlmorningstar/my-portfolio.git
+cd my-portfolio
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Install dependencies
+npm install
 
-### `npm run eject`
+# Start the development server
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The app runs at `http://localhost:3000`. The router basename is set to `/` in development and `/my-portfolio` in production automatically via `process.env.NODE_ENV`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Deployment
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This portfolio is deployed to GitHub Pages using the `gh-pages` package.
 
-## Learn More
+```bash
+# Build and deploy to GitHub Pages
+npm run deploy
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This runs the `predeploy` script (which builds the app) and then pushes the `build` folder to the `gh-pages` branch of the repository.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> **Note:** Always run `git push origin main` to update the source code before running `npm run deploy` to update the live site.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Design System
 
-### Analyzing the Bundle Size
+The UI is built around a set of CSS custom properties defined in `Index.css`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Background:** Deep navy-black (`#080c14`) with a subtle dot-grid texture
+- **Surfaces:** Layered glass panels using `rgba` and `backdrop-filter`
+- **Accent:** `#3ecf8e` — a refined emerald green used for active states, highlights, and interactive elements
+- **Typography:** Raleway, Manrope, Montserrat, and Poppins
+- **Motion:** AOS for scroll-triggered entrance animations; CSS keyframes for navigation transitions
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Project Structure
 
-### Advanced Configuration
+```
+src/
+├── components/
+│   ├── MainNavigation.jsx
+│   ├── MainNavigation.css
+│   ├── Fallback.jsx
+│   └── ScrollToTop.jsx
+├── pages/
+│   ├── RootLayout.jsx
+│   ├── HomePage.jsx
+│   ├── About.jsx
+│   ├── StackPage.jsx
+│   ├── Projects.jsx
+│   ├── Contact.jsx
+|   ├── ConnectionNote.jsx
+|   ├── DispatchItem.jsx
+│   ├── Licensing.jsx
+│   └── ErrorPage.jsx
+│   └── Index.css
+├── context/
+│   └── AOSContext.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**Joel Onyeabor**
 
-### `npm run build` fails to minify
+- GitHub: [@earlmorningstar](https://github.com/earlmorningstar)
+- Portfolio: [earlmorningstar.github.io/my-portfolio](https://earlmorningstar.github.io/my-portfolio/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## License
+
+All content, design, and code in this portfolio are the intellectual property of Joel Onyeabor unless otherwise stated. See the [Licensing](https://earlmorningstar.github.io/my-portfolio/licensing) page for details.

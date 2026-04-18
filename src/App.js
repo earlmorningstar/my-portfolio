@@ -29,8 +29,8 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/my-portfolio/",
-  }
+    basename: process.env.NODE_ENV === "production" ? "/my-portfolio" : "/",
+  },
 );
 
 function App() {

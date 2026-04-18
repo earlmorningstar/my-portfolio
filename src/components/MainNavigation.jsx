@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { NavLink } from "react-router-dom";
 import { GoDotFill } from "react-icons/go";
 import { MdHomeFilled, MdOutlineMail } from "react-icons/md";
@@ -11,24 +12,32 @@ import "./MainNavigation.css";
 
 function MainNavigation() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+    if (isDropdownOpen) {
+      setIsClosing(true);
+      setTimeout(() => {
+        setIsClosing(false);
+        setIsDropdownOpen(false);
+      }, 500);
+    } else {
+      setIsDropdownOpen(true);
+    }
   };
 
   return (
     <>
       <nav id="main-nav-id" className="main-nav">
         <div className="profile-section">
-          <span>
+          <div className="profile-image-wrapper">
             <img
               src="images/portfolio-handle-img.jpeg"
               alt="Profile"
               className="profile-image"
             />
-          </span>
-
+          </div>
           <div id="status-id" className="status">
-            {" "}
             <GoDotFill /> Available for Work
           </div>
         </div>
@@ -48,147 +57,115 @@ function MainNavigation() {
             }
             to="/"
           >
-            <MdHomeFilled size={16} />
-            Home
+            <MdHomeFilled size={16} /> Home
           </NavLink>
-
-          {/* <NavLink
-            className={({ isActive }) =>
-              isActive ? "navlinks active" : "navlinks"
-            }
-            to="/blog"
-          >
-            <LiaBlogSolid size={16} />
-            Blog
-          </NavLink> */}
-
           <NavLink
             className={({ isActive }) =>
               isActive ? "navlinks active" : "navlinks"
             }
             to="/about"
           >
-            <CgProfile size={16} />
-            About
+            <CgProfile size={16} /> About
           </NavLink>
-
           <NavLink
             className={({ isActive }) =>
               isActive ? "navlinks active" : "navlinks"
             }
             to="/stack"
           >
-            <SiDatabricks size={16} />
-            Stack
+            <SiDatabricks size={16} /> Stack
           </NavLink>
-
           <NavLink
             className={({ isActive }) =>
               isActive ? "navlinks active" : "navlinks"
             }
             to="/project"
           >
-            <PiWallLight size={16} />
-            Projects
+            <PiWallLight size={16} /> Projects
           </NavLink>
-
           <NavLink
             className={({ isActive }) =>
               isActive ? "navlinks active" : "navlinks"
             }
             to="/contact"
           >
-            <MdOutlineMail size={16} />
-            Contact
+            <MdOutlineMail size={16} /> Contact
           </NavLink>
-
           <NavLink
             className={({ isActive }) =>
               isActive ? "navlinks active" : "navlinks"
             }
             to="/licensing"
           >
-            <PiCopyrightLight size={16} />
-            Licensing
+            <PiCopyrightLight size={16} /> Licensing
           </NavLink>
         </div>
       </nav>
 
-      {isDropdownOpen && (
-        <div className="dropdown-nav-links-parent">
-          <div className="nav-link-dropDown">
-            <NavLink
-              className={({ isActive }) =>
-              isActive ? "navlinks active" : "navlinks"
-            }
-              to="/" onClick={toggleDropdown}
-            >
-              <MdHomeFilled size={16} />
-              Home
-            </NavLink>
-
-            {/* <NavLink
-              className={({ isActive }) =>
-                isActive ? "navlinks active" : "navlinks"
-              }
-              to="/blog" onClick={toggleDropdown}
-            >
-              <LiaBlogSolid size={16} />
-              Blog
-            </NavLink> */}
-
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "navlinks active" : "navlinks"
-              }
-              to="/about" onClick={toggleDropdown}
-            >
-              <CgProfile size={16} />
-              About
-            </NavLink>
-
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "navlinks active" : "navlinks"
-              }
-              to="/stack" onClick={toggleDropdown}
-            >
-              <SiDatabricks size={16} />
-              Stack
-            </NavLink>
-
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "navlinks active" : "navlinks"
-              }
-              to="/project" onClick={toggleDropdown}
-            >
-              <PiWallLight size={16} />
-              Projects
-            </NavLink>
-
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "navlinks active" : "navlinks"
-              }
-              to="/contact" onClick={toggleDropdown}
-            >
-              <MdOutlineMail size={16} />
-              Contact
-            </NavLink>
-
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "navlinks active" : "navlinks"
-              }
-              to="/licensing" onClick={toggleDropdown}
-            >
-              <PiCopyrightLight size={16} />
-              Licensing
-            </NavLink>
-          </div>
-        </div>
-      )}
+      {(isDropdownOpen || isClosing) &&
+        createPortal(
+          <div
+            className={`dropdown-nav-links-parent ${isClosing ? "closing" : ""}`}
+          >
+            <div className="nav-link-dropDown">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "navlinks active" : "navlinks"
+                }
+                to="/"
+                onClick={toggleDropdown}
+              >
+                <MdHomeFilled size={16} /> Home
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "navlinks active" : "navlinks"
+                }
+                to="/about"
+                onClick={toggleDropdown}
+              >
+                <CgProfile size={16} /> About
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "navlinks active" : "navlinks"
+                }
+                to="/stack"
+                onClick={toggleDropdown}
+              >
+                <SiDatabricks size={16} /> Stack
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "navlinks active" : "navlinks"
+                }
+                to="/project"
+                onClick={toggleDropdown}
+              >
+                <PiWallLight size={16} /> Projects
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "navlinks active" : "navlinks"
+                }
+                to="/contact"
+                onClick={toggleDropdown}
+              >
+                <MdOutlineMail size={16} /> Contact
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "navlinks active" : "navlinks"
+                }
+                to="/licensing"
+                onClick={toggleDropdown}
+              >
+                <PiCopyrightLight size={16} /> Licensing
+              </NavLink>
+            </div>
+          </div>,
+          document.body,
+        )}
     </>
   );
 }
