@@ -82,7 +82,7 @@ export const projectItems = [
       "images/kairosImg-7.png",
       "images/kairosImg-8.png",
     ],
-    projectType: "AI Coding Companion",
+    projectType: "AI CODING COMPANION",
     title: "KAIROS Dreamweaver",
     url: "https://github.com/earlmorningstar/kairos-dreamweaver",
     stack: [
@@ -93,6 +93,24 @@ export const projectItems = [
     githubURL: "https://github.com/earlmorningstar/kairos-dreamweaver",
     paragraph:
       "Developed an autonomous background AI agent built in Python that monitors active project directories, analyses code changes, and auto-generates contextual development reports and actionable suggestions without user intervention. Demonstrates applied AI reasoning, file system automation, and background process architecture."
+  },
+  {
+    images: [
+      "images/klozebuyImg.png",
+    ],
+    projectType: "PROXIMITY-BASED MARKETPLACE MOBILE APP",
+    title: "klozeBuy",
+    url: "https://github.com/earlmorningstar/klozebuy",
+    stack: [
+      { img: "images/react-native-3d.png", name: "React Native" },
+      { img: "images/expoImg.png", name: "Expo" },
+      { img: "images/nodejs.png", name: "Node.js" },
+      { img: "images/express-9d.png", name: "Express.js" },
+      { img: "images/mongodb.png", name: "MongoDB" },
+    ],
+    githubURL: "https://github.com/earlmorningstar/klozebuy",
+    paragraph:
+      "Engineered a location-aware e-commerce platform enabling sellers to create storefronts and list products, while buyers discover nearby stores ranked by proximity and rating, place orders, and track fulfilment in real time. Features dedicated seller analytics, multi-tab buyer and seller interfaces, and a full order lifecycle management system."
   },
   {
     images: [
