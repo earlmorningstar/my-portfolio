@@ -99,7 +99,7 @@ export const projectItems = [
       "images/klozebuyImg.png",
     ],
     projectType: "PROXIMITY-BASED MARKETPLACE MOBILE APP",
-    title: "klozeBuy",
+    title: "KlozeBuy",
     url: "https://github.com/earlmorningstar/klozebuy",
     stack: [
       { img: "images/react-native-3d.png", name: "React Native" },

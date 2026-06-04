@@ -257,7 +257,7 @@
   background: var(--bg-surface);
   border: 1px solid var(--glass-border);
   width: 100%;
-  min-height: 7rem;
+  height: 10em;
   padding: 1.2rem 1rem;
   border-radius: var(--radius-md);
   transition:
@@ -377,7 +377,7 @@
   font-family: "Raleway", sans-serif;
   font-size: 22px;
   font-weight: 500;
-  margin: 18px 0 12px 0;
+  margin: 18px 0 18px 15px;
 }
 
 .git-link {
