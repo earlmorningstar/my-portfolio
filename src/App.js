@@ -19,7 +19,6 @@ const router = createBrowserRouter(
       errorElement: <ErrorPage />,
       children: [
         { index: true, element: <HomePage /> },
-
         { path: "about", element: <About /> },
         { path: "stack", element: <StackPage /> },
         { path: "project", element: <Projects /> },
@@ -29,7 +28,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: process.env.NODE_ENV === "production" ? "/my-portfolio" : "/",
+    basename: process.env.PUBLIC_URL,
   },
 );
 

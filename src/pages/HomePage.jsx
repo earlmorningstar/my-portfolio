@@ -29,15 +29,13 @@ const HomePage = () => {
   }, [aos, componentId]);
 
   const renderProjectImage = (item) => {
-    if (item.images.length === 1) {
+    if (item.images.length === 1 || !slidersInitialized) {
       return (
-        <img src={item.images[0]} alt={item.title} className="project-image" />
-      );
-    }
-
-    if (!slidersInitialized) {
-      return (
-        <img src={item.images[0]} alt={item.title} className="project-image" />
+        <img
+          src={`${process.env.PUBLIC_URL}/${item.images[0]}`}
+          alt={item.title}
+          className="project-image"
+        />
       );
     }
 
@@ -58,7 +56,7 @@ const HomePage = () => {
           {item.images.map((image, idx) => (
             <div key={idx}>
               <img
-                src={image}
+                src={`${process.env.PUBLIC_URL}/${image}`}
                 alt={`${item.title} slide ${idx + 1}`}
                 className="project-image"
               />
@@ -141,7 +139,7 @@ const HomePage = () => {
             <div className="hp-each-tech-kit" key={index}>
               <span>
                 <img
-                  src={item.image}
+                  src={`${process.env.PUBLIC_URL}/${item.image}`}
                   alt={item.title}
                   className="hp-stack-image"
                 />

@@ -229,13 +229,13 @@ const Projects = () => {
   const renderProjectImage = (item) => {
     if (item.images.length === 1) {
       return (
-        <img src={item.images[0]} alt={item.title} className="project-image" />
+        <img src={`${process.env.PUBLIC_URL}/${item.images[0]}`} alt={item.title} className="project-image" />
       );
     }
 
     if (!slidersInitialized) {
       return (
-        <img src={item.images[0]} alt={item.title} className="project-image" />
+        <img src={`${process.env.PUBLIC_URL}/${item.images[0]}`} alt={item.title} className="project-image" />
       );
     }
 
@@ -256,7 +256,7 @@ const Projects = () => {
           {item.images.map((image, idx) => (
             <div key={idx}>
               <img
-                src={image}
+                src={`${process.env.PUBLIC_URL}/${image}`}
                 alt={`${item.title} slide ${idx + 1}`}
                 className="project-image"
               />
@@ -314,7 +314,7 @@ const Projects = () => {
                       {item.stack.map((stackItem, idx) => (
                         <div key={idx} className="stack-item">
                           <img
-                            src={stackItem.img}
+                            src={`${process.env.PUBLIC_URL}/${stackItem.img}`}
                             alt={stackItem.name}
                             className="stack-icon"
                           />

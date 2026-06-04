@@ -139,7 +139,7 @@ const StackPage = () => {
                 <div className="each-tech-kit" key={index}>
                   <span>
                     <img
-                      src={item.image}
+                      src={`${process.env.PUBLIC_URL}/${item.image}`}
                       alt={item.title}
                       className="stack-image"
                     />

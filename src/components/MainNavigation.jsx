@@ -32,7 +32,7 @@ function MainNavigation() {
         <div className="profile-section">
           <div className="profile-image-wrapper">
             <img
-              src="images/portfolio-handle-img.jpeg"
+              src={`${process.env.PUBLIC_URL}/images/portfolio-handle-img.jpeg`}
               alt="Profile"
               className="profile-image"
             />
