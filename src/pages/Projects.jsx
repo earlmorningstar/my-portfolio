@@ -10,27 +10,59 @@ import "slick-carousel/slick/slick-theme.css";
 export const projectItems = [
   {
     images: [
-      "images/EchoChatImg-1.png",
-      "images/EchoChatImg-2.png",
-      "images/EchoChatImg-3.png",
-      "images/EchoChatImg-4.png",
-      "images/EchoChatImg-5.png",
-      "images/EchoChatImg-6.png",
-      "images/EchoChatImg-7.png",
-      "images/EchoChatImg-8.png",
-      "images/EchoChatImg-9.png",
-      "images/EchoChatImg-10.png",
-      "images/EchoChatImg-11.png",
+      "images/auraImg-1.png",
+      "images/auraImg-2.png",
+      "images/auraImg-3.png",
+      "images/auraImg-4.png",
+      "images/auraImg-5.png",
+      "images/auraImg-6.png",
+      "images/auraImg-8.png",
+      "images/auraImg-9.png",
+      "images/auraImg-10.png",
+      "images/auraImg-12.png",
+      "images/auraImg-13.png",
+    ],
+    projectType: "CREATOR ANALYTICS DASHBOARD",
+    title: "Aura",
+    url: "https://aura-ai-dash.vercel.app",
+    stack: [
+      { img: "images/nextjs.jpg", name: "Next.js" },
+      { img: "images/typescript.jpg", name: "TypeScript" },
+      { img: "images/tailwind-removebg-preview.png", name: "Tailwind CSS" },
+      { img: "images/supabase.png", name: "Supabase" },
+      { img: "images/stripe-9d.jpg", name: "Stripe" },
+      { img: "images/openAI.png", name: "OpenAI" },
+    ],
+    githubURL: "https://github.com/earlmorningstar/aura",
+    paragraph:
+      "Built a full-stack analytics platform featuring real-time revenue tracking, audience and content performance metrics, and an AI-powered weekly insights engine using OpenAI. Implemented multi-workspace support and a conversational AI assistant, demonstrating applied integration of large language models into a data-driven business intelligence interface."
+  },
+  {
+    images: [
+      "images/newEchoChatImg-1.png",
+      "images/newEchoChatImg-2.png",
+      "images/newEchoChatImg-3.png",
+      "images/newEchoChatImg-4.png",
+      "images/newEchoChatImg-5.png",
+      "images/newEchoChatImg-6.png",
+      "images/newEchoChatImg-8.png",
+      "images/newEchoChatImg-9.png",
+      "images/newEchoChatImg-10.png",
+      "images/newEchoChatImg-12.png",
+      "images/newEchoChatImg-13.png",
+      "images/newEchoChatImg-14.png",
+      "images/newEchoChatImg-15.png",
+
     ],
     projectType: "MODERN WEB CHAT APP WITH REAL-TIME COMMUNICATION",
     title: "EchoChat",
     url: "https://echochat-livid.vercel.app",
     stack: [
-      { img: "images/mongodb.png", name: "MongoDB" },
-      { img: "images/express-9d.png", name: "Express.js" },
       { img: "images/react-img-removebg-preview.png", name: "React" },
-      { img: "images/nodejs.png", name: "Node.js" },
       { img: "images/typescript.jpg", name: "TypeScript" },
+      { img: "images/nodejs.png", name: "Node.js" },
+      { img: "images/express-9d.png", name: "Express.js" },
+      { img: "images/mongodb.png", name: "MongoDB" },
       { img: "images/twilio-i-9d.png", name: "Twilio" },
       { img: "images/nodemailer-9d.png", name: "Node Mailer" },
       { img: "images/materialUI-9d.png", name: "Material UI" },
@@ -38,6 +70,29 @@ export const projectItems = [
     githubURL: "https://github.com/earlmorningstar/echo-chat",
     paragraph:
       "Built a real-time web chat application designed for seamless communication, integrating features like instant messaging, voice & video calling, and live call status updates. Leveraging React (TypeScript) for the frontend, Node.js & Express for the backend, MongoDB, and Twilio Voice and Video SDKs to enable seamless one-on-one calling within the chat application. The app supports dynamic call handling (accept, reject, end), call history tracking, and real-time presence updates. The UI also includes custom theming, animations, responsive interface design and interactive grid effects to elevate user experience.",
+  },
+  {
+    images: [
+      "images/kairosImg-1.png",
+      "images/kairosImg-2.png",
+      "images/kairosImg-3.png",
+      "images/kairosImg-4.png",
+      "images/kairosImg-5.png",
+      "images/kairosImg-6.png",
+      "images/kairosImg-7.png",
+      "images/kairosImg-8.png",
+    ],
+    projectType: "AI Coding Companion",
+    title: "KAIROS Dreamweaver",
+    url: "https://github.com/earlmorningstar/kairos-dreamweaver",
+    stack: [
+      { img: "images/python.png", name: "Python" },
+      { img: "images/langchain.png", name: "LangChain" },
+      { img: "images/groq.png", name: "Groq" },
+    ],
+    githubURL: "https://github.com/earlmorningstar/kairos-dreamweaver",
+    paragraph:
+      "Developed an autonomous background AI agent built in Python that monitors active project directories, analyses code changes, and auto-generates contextual development reports and actionable suggestions without user intervention. Demonstrates applied AI reasoning, file system automation, and background process architecture."
   },
   {
     images: [
@@ -56,10 +111,10 @@ export const projectItems = [
     title: "Trend Vault",
     url: "https://codsoft-trendvault.vercel.app",
     stack: [
-      { img: "images/mongodb.png", name: "MongoDB" },
-      { img: "images/express-9d.png", name: "Express.js" },
       { img: "images/react-img-removebg-preview.png", name: "React" },
       { img: "images/nodejs.png", name: "Node.js" },
+      { img: "images/express-9d.png", name: "Express.js" },
+      { img: "images/mongodb.png", name: "MongoDB" },
       { img: "images/shopify-9d.png", name: "Shopify" },
       { img: "images/stripe-9d.jpg", name: "Stripe" },
       { img: "images/nodemailer-9d.png", name: "Node Mailer" },
@@ -80,78 +135,78 @@ export const projectItems = [
     title: "Project Management App",
     url: "https://codsoft-projectmgtapp.vercel.app/",
     stack: [
-      { img: "images/mongodb.png", name: "MongoDB" },
-      { img: "images/express-9d.png", name: "Express.js" },
       { img: "images/react-img-removebg-preview.png", name: "React" },
       { img: "images/nodejs.png", name: "Node.js" },
+      { img: "images/express-9d.png", name: "Express.js" },
+      { img: "images/mongodb.png", name: "MongoDB" },
       { img: "images/materialUI-9d.png", name: "Material UI" },
     ],
     githubURL: "https://github.com/earlmorningstar/CODSOFT",
     paragraph:
       "Build this full-stack Project Management App, and it offers a streamlined way for users to manage multiple projects and tasks with precision. Users can create, edit, and delete projects, assign tasks with deadlines, and track task progress through customizable status indicators like (Pending, In-Progress, and Completed). A personal profile dashboard also allows for account management. Built with React, Node.js, Express, and MongoDB, the app demonstrates efficient CRUD operations, structured data handling, and responsive UI design",
   },
-  {
-    images: [
-      "images/graceGuide-1.png",
-      "images/graceGuide-2.png",
-      "images/graceGuide-3.png",
-      "images/graceGuide-4.png",
-      "images/graceGuide-5.png",
-    ],
-    projectType: "WEB APPLICATION",
-    title: "Grace Guide",
-    url: "https://graceguide.vercel.app/",
-    stack: [{ img: "images/react-img-removebg-preview.png", name: "React" }],
-    githubURL: "https://github.com/earlmorningstar/graceguide",
-    paragraph:
-      "Grace Guide is a Bible web application built with React that offers users a structured and uplifting devotional experience. The app features a Verse of the Day (VOTD) tab that displays the current and previous day's verses, including chapter reference and Bible version. Users can explore scripture through the Bible tab by selecting a version, book, chapter, and verse, with intuitive navigation for next/previous passages. A Read Full Chapter tab allows for seamless reading of entire chapters, while the Daily Prayer tab offers a curated devotional verse paired with a unique prayer. Bible content and verses are dynamically fetched from an external API, while daily prayers are preloaded within the app, ensuring both real-time access and personalized devotion.",
-  },
-  {
-    images: ["images/espresso-two-img.png"],
-    projectType: "E-COMMERCE WEB APPLICATION",
-    title: "Espresso Amore",
-    url: "https://espressoamore.vercel.app/",
-    stack: [
-      { img: "images/react-img-removebg-preview.png", name: "React" },
-      { img: "images/materialUI-9d.png", name: "Material UI" },
-    ],
-    githubURL: "https://github.com/earlmorningstar/espressoamore",
-    paragraph:
-      "Empresso Amore is a React-based e-commerce web application centered around a coffee shopping experience. Users can create accounts, browse the coffee menu, add items to their cart or favorites, and proceed through checkout. The app includes a user profile section displaying personal details and account management options. Built as a practice project, it demonstrates effective use of Context API for global state management, local storage for persistence, and robust API integration with error handling to simulate a full-featured shopping workflow.",
-  },
-  {
-    images: ["images/port-img.png"],
-    projectType: "WEB APPLICATION",
-    title: "My Portfolio",
-    url: "https://earlmorningstar.github.io/my-portfolio",
-    stack: [
-      { img: "images/react-img-removebg-preview.png", name: "React" },
-      { img: "images/materialUI-9d.png", name: "Material UI" },
-    ],
-    githubURL: "https://github.com/earlmorningstar/my-portfolio",
-    paragraph:
-      "My Developer Portfolio is a clean, responsive web application built with React to showcase my work, skills, and background. It features dedicated tabs for an introduction about me, my tech stack, selected projects, and contact information. The contact section integrates EmailJS, allowing visitors to reach out directly via email through the site, alongside links to my social profiles. It also includes a licensing section for transparency regarding project usage. Designed with simplicity and clarity in mind, it serves as a central hub for presenting my development journey.",
-  },
-  {
-    images: ["images/chronicleHub.png"],
-    projectType: "WEB APPLICATION",
-    title: "Chronicle Hub",
-    url: "https://github.com/earlmorningstar/chroniclehub",
-    stack: [{ img: "images/react-img-removebg-preview.png", name: "React" }],
-    githubURL: "https://github.com/earlmorningstar/chroniclehub",
-    paragraph:
-      "ChronicleHub is a dynamic blog-style web application that fetches real-time news from multiple external APIs, offering users a variety of stories across different categories. Built with React and Context API for efficient state management, it displays article titles, descriptions, authors, publish dates, thumbnails, and direct links to full content (due to API constraints). It includes features like automatic content refresh, error handling, and responsive design, serving as a practical showcase of API integration, state handling, and adaptive UI development.",
-  },
-  {
-    images: ["images/kubeInsight-img.png"],
-    projectType: "WEB APPLICATION",
-    title: "KubeInsight",
-    url: "https://kubeinsights.vercel.app/",
-    stack: [{ img: "images/react-img-removebg-preview.png", name: "React" }],
-    githubURL: "https://github.com/earlmorningstar/kubeInsights",
-    paragraph:
-      "KubeInsights is a responsive, multi-page landing web application focused on clean UI, smooth navigation, and user experience. It showcases effective use of React fundamentals including code splitting, form validation, and modular styling—all without external APIs or complex state management. The project emphasizes structured layouts, intuitive design, and performance-focused implementation.",
-  },
+  // {
+  //   images: [
+  //     "images/graceGuide-1.png",
+  //     "images/graceGuide-2.png",
+  //     "images/graceGuide-3.png",
+  //     "images/graceGuide-4.png",
+  //     "images/graceGuide-5.png",
+  //   ],
+  //   projectType: "WEB APPLICATION",
+  //   title: "Grace Guide",
+  //   url: "https://graceguide.vercel.app/",
+  //   stack: [{ img: "images/react-img-removebg-preview.png", name: "React" }],
+  //   githubURL: "https://github.com/earlmorningstar/graceguide",
+  //   paragraph:
+  //     "Grace Guide is a Bible web application built with React that offers users a structured and uplifting devotional experience. The app features a Verse of the Day (VOTD) tab that displays the current and previous day's verses, including chapter reference and Bible version. Users can explore scripture through the Bible tab by selecting a version, book, chapter, and verse, with intuitive navigation for next/previous passages. A Read Full Chapter tab allows for seamless reading of entire chapters, while the Daily Prayer tab offers a curated devotional verse paired with a unique prayer. Bible content and verses are dynamically fetched from an external API, while daily prayers are preloaded within the app, ensuring both real-time access and personalized devotion.",
+  // },
+  // {
+  //   images: ["images/espresso-two-img.png"],
+  //   projectType: "E-COMMERCE WEB APPLICATION",
+  //   title: "Espresso Amore",
+  //   url: "https://espressoamore.vercel.app/",
+  //   stack: [
+  //     { img: "images/react-img-removebg-preview.png", name: "React" },
+  //     { img: "images/materialUI-9d.png", name: "Material UI" },
+  //   ],
+  //   githubURL: "https://github.com/earlmorningstar/espressoamore",
+  //   paragraph:
+  //     "Empresso Amore is a React-based e-commerce web application centered around a coffee shopping experience. Users can create accounts, browse the coffee menu, add items to their cart or favorites, and proceed through checkout. The app includes a user profile section displaying personal details and account management options. Built as a practice project, it demonstrates effective use of Context API for global state management, local storage for persistence, and robust API integration with error handling to simulate a full-featured shopping workflow.",
+  // },
+  // {
+  //   images: ["images/port-img.png"],
+  //   projectType: "WEB APPLICATION",
+  //   title: "My Portfolio",
+  //   url: "https://earlmorningstar.github.io/my-portfolio",
+  //   stack: [
+  //     { img: "images/react-img-removebg-preview.png", name: "React" },
+  //     { img: "images/materialUI-9d.png", name: "Material UI" },
+  //   ],
+  //   githubURL: "https://github.com/earlmorningstar/my-portfolio",
+  //   paragraph:
+  //     "My Developer Portfolio is a clean, responsive web application built with React to showcase my work, skills, and background. It features dedicated tabs for an introduction about me, my tech stack, selected projects, and contact information. The contact section integrates EmailJS, allowing visitors to reach out directly via email through the site, alongside links to my social profiles. It also includes a licensing section for transparency regarding project usage. Designed with simplicity and clarity in mind, it serves as a central hub for presenting my development journey.",
+  // },
+  // {
+  //   images: ["images/chronicleHub.png"],
+  //   projectType: "WEB APPLICATION",
+  //   title: "Chronicle Hub",
+  //   url: "https://github.com/earlmorningstar/chroniclehub",
+  //   stack: [{ img: "images/react-img-removebg-preview.png", name: "React" }],
+  //   githubURL: "https://github.com/earlmorningstar/chroniclehub",
+  //   paragraph:
+  //     "ChronicleHub is a dynamic blog-style web application that fetches real-time news from multiple external APIs, offering users a variety of stories across different categories. Built with React and Context API for efficient state management, it displays article titles, descriptions, authors, publish dates, thumbnails, and direct links to full content (due to API constraints). It includes features like automatic content refresh, error handling, and responsive design, serving as a practical showcase of API integration, state handling, and adaptive UI development.",
+  // },
+  // {
+  //   images: ["images/kubeInsight-img.png"],
+  //   projectType: "WEB APPLICATION",
+  //   title: "KubeInsight",
+  //   url: "https://kubeinsights.vercel.app/",
+  //   stack: [{ img: "images/react-img-removebg-preview.png", name: "React" }],
+  //   githubURL: "https://github.com/earlmorningstar/kubeInsights",
+  //   paragraph:
+  //     "KubeInsights is a responsive, multi-page landing web application focused on clean UI, smooth navigation, and user experience. It showcases effective use of React fundamentals including code splitting, form validation, and modular styling—all without external APIs or complex state management. The project emphasizes structured layouts, intuitive design, and performance-focused implementation.",
+  // },
 ];
 
 const Projects = () => {

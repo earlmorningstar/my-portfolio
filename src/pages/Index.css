@@ -151,7 +151,9 @@
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.02em;
-  transition: background var(--transition), border-color var(--transition),
+  transition:
+    background var(--transition),
+    border-color var(--transition),
     color var(--transition);
 }
 
@@ -177,7 +179,9 @@
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--glass-border);
-  transition: border-color var(--transition), transform var(--transition);
+  transition:
+    border-color var(--transition),
+    transform var(--transition);
 }
 
 .dispatch-image-container:hover {
@@ -200,7 +204,11 @@
   left: 0;
   right: 0;
   color: var(--text-primary);
-  background: linear-gradient(to top, rgba(8, 12, 20, 0.9) 0%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(8, 12, 20, 0.9) 0%,
+    transparent 100%
+  );
   padding: 28px 14px 14px;
   font-size: 14px;
 }
@@ -226,7 +234,7 @@
 /* Stack section on homepage */
 .homepage-main-container > span:not(#hp-mainContainer-span-id) h3 {
   font-family: "Manrope", sans-serif;
-  font-weight: 500;
+  font-weight: 530;
   font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -252,7 +260,9 @@
   min-height: 7rem;
   padding: 1.2rem 1rem;
   border-radius: var(--radius-md);
-  transition: background var(--transition), border-color var(--transition),
+  transition:
+    background var(--transition),
+    border-color var(--transition),
     transform var(--transition);
 }
 
@@ -307,6 +317,7 @@
   display: block;
   position: relative;
   width: 100%;
+  aspect-ratio: 16 / 7;
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--glass-border);
@@ -320,7 +331,7 @@
 
 .project-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.55s ease;
@@ -410,7 +421,9 @@
   border: 1px solid var(--glass-border);
   border-radius: 6px;
   padding: 5px 10px;
-  transition: background var(--transition), border-color var(--transition);
+  transition:
+    background var(--transition),
+    border-color var(--transition);
 }
 
 .stack-item:hover {
@@ -431,17 +444,51 @@
   font-weight: 500;
 }
 
+
 /* Slick carousel overrides */
 .project-slider-container {
   width: 100%;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+}
+
+.project-slider-container .slick-slider {
   height: 100%;
 }
 
-.slick-slide img {
+.project-slider-container .slick-list {
+  height: 100% !important;
+}
+
+.project-slider-container .slick-track {
+  height: 100% !important;
+  display: flex !important;
+}
+
+.project-slider-container .slick-slide {
+  height: inherit !important;
+  overflow: hidden;
+}
+
+.project-slider-container .slick-slide > div {
+  height: 100%;
+}
+
+.project-slider-container .slick-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.project-image-holder:hover .project-image,
+.project-image-holder:hover .project-slider-container img {
+  transform: scale(1.05);
+}
+
+.project-image,
+.project-slider-container img {
+  transition: transform 0.55s ease;
 }
 
 .slick-dots {
@@ -457,13 +504,6 @@
 .slick-dots li.slick-active button:before {
   color: var(--accent);
   opacity: 1;
-}
-
-.slick-list,
-.slick-track,
-.slick-slide,
-.slick-slide > div {
-  height: 100%;
 }
 
 /* ============================================
@@ -486,7 +526,8 @@
   font-weight: 300;
   color: var(--text-primary);
   width: max-content;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
     color 0.22s ease;
 }
 
@@ -644,9 +685,11 @@
   border-radius: var(--radius-md);
   display: flex;
   gap: 2rem;
-  height: 14rem;
+  height: 9rem;
   margin-bottom: 1.2rem;
-  transition: background var(--transition), border-color var(--transition);
+  transition:
+    background var(--transition),
+    border-color var(--transition);
 }
 
 .each-tech-kit:hover {
@@ -667,12 +710,28 @@
   border-radius: 7%;
 }
 
+.tech-category-group {
+  margin-bottom: 3rem;
+}
+
+.tech-category-heading {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-muted);
+  margin-bottom: 1.2rem;
+}
+
 #stack-title {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 #stack-fs-id {
   font-size: 13px;
+  font-weight: 700;
+  margin: 4px 0;
 }
 
 /* ============================================
@@ -776,7 +835,9 @@
   width: 100%;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  transition: border-color var(--transition), background var(--transition);
+  transition:
+    border-color var(--transition),
+    background var(--transition);
 }
 
 .infoInput-holder textarea {
@@ -791,7 +852,9 @@
   resize: vertical;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  transition: border-color var(--transition), background var(--transition);
+  transition:
+    border-color var(--transition),
+    background var(--transition);
 }
 
 .infoInput-holder input:focus,
@@ -819,7 +882,9 @@
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.04em;
-  transition: background var(--transition), border-color var(--transition);
+  transition:
+    background var(--transition),
+    border-color var(--transition);
 }
 
 .form-holder button:hover {
@@ -912,7 +977,9 @@
   font-size: 14px;
   font-weight: 400;
   font-family: "Manrope", sans-serif;
-  transition: background var(--transition), border-color var(--transition);
+  transition:
+    background var(--transition),
+    border-color var(--transition);
 }
 
 .errorPage-btn:hover {
