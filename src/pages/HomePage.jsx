@@ -81,12 +81,12 @@ const HomePage = () => {
         >
           <h3>Hey, I'm Joel,</h3>
           <h4>
-            ...a frontend engineer who builds intuitive, real-world digital
-            experiences that just feel right. I live in React and modern web
-            technologies, but I’ve also gone deep into backend development,
-            most notably with Kairos Dreamweaver; so I can take ideas from
-            sketch to fully shipped product. Always learning, always refining,
-            always creating with intention.
+            ...a software engineer who builds intuitive, real-world digital
+            experiences across web and mobile. I'm deeply at home in React,
+            TypeScript, and the modern JavaScript ecosystem; but I don't stop
+            at the frontend. From full-stack web apps to cross-platform mobile
+            development to AI-powered desktop tools, I take ideas from concept
+            to fully shipped product.
           </h4>
         </span>
         <div

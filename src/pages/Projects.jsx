@@ -115,7 +115,6 @@ export const projectItems = [
   {
     images: [
       "images/trendVault-1.png",
-      "images/trendVault-3.png",
       "images/trendVault-4.png",
       "images/trendVault-5.png",
       "images/trendVault-6.png",

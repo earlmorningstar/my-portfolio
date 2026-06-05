@@ -110,7 +110,7 @@
 .homepage-main-container span > h3 {
   font-family: "Manrope", sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--accent-muted);
   letter-spacing: 0.04em;
 }
@@ -118,7 +118,7 @@
 .homepage-main-container span > h4 {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  font-size: 28px;
+  font-size: 22px;
   line-height: 1.65;
   color: var(--text-primary);
 }
@@ -650,6 +650,7 @@
   font-size: 16px;
   font-weight: 400;
   color: var(--text-primary);
+  margin-bottom: 3px;
 }
 
 #aboutpage-detailHolder p {
@@ -1087,7 +1088,7 @@
 
 @media screen and (max-width: 650px) {
   .homepage-main-container span > h4 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .aboutpage-headers-holder h2 {
